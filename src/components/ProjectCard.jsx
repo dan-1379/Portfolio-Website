@@ -8,7 +8,11 @@ const ProjectCard = (props) => {
                 <span key={index}>{tech}</span>
             ))}
            </div>
-           <a href={props.github} target="_blank" className="githubLink">Github →</a>
+
+           <div className="externalLinks">
+            <a href={props.github} target="_blank" className="githubLink">Github <i>→</i></a>
+            {props.demo && <a href={props.demo} target="_blank" className="githubLink">Demo <i>→</i></a> }
+           </div>
         </div>
     )
 }

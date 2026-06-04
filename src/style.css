@@ -56,7 +56,8 @@ nav {
     color: var(--text);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 700px), 
+screen and (max-height: 500px) and (orientation: landscape) {
     .navbar-links {
         display: none;
     }
@@ -70,7 +71,8 @@ nav {
     }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 700px) and (orientation: portrait),
+screen and (min-width: 900px) {
     .mobileNavMenu {
         display: none;
     }
@@ -117,7 +119,6 @@ header {
     margin: 1em;
     display: flex;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
 }
 
 header h1 {
@@ -251,13 +252,8 @@ section h3 {
     SKILLS
 */
 .languages, .frameworks, .tools {
-    /* display: flex;
-    flex-wrap: wrap;
-    gap: 2em;
-    align-content: center; */
-
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 2em;
     margin-top: 1em;
 }
@@ -322,9 +318,28 @@ section h3 {
 
 .githubLink {
     text-decoration: none;
-    color: var(--muted);
+    color: var(--text);
     margin-top: 1em;
     display: block;
+    width: fit-content;
+}
+
+.githubLink:hover {
+    border-bottom: 1px solid var(--accent);
+}
+
+.githubLink i {
+    display: inline-block;
+    transition: 0.5s ease-in;
+}
+
+.githubLink:hover i {
+    transform: translateX(0.2em);
+}
+
+.externalLinks {
+    display: flex;
+    gap: 2em;
 }
 
 /*
