@@ -1,4 +1,4 @@
-import { Mail, Handshake, Computer, MapPin } from 'lucide-react';
+import { Mail, Handshake, Computer, MapPin, FileUser, ArrowBigUp } from 'lucide-react';
 
 const Contact = () => {
     return (
@@ -11,22 +11,27 @@ const Contact = () => {
                 </p>
                 <div className="contactLinks">
                     <div className="contactLink">
-                        <Mail />
+                        <Mail className='contactIcon'/>
                         <a href="mailto:daniel1courtney3@gmail.com">Email</a>
                     </div>
 
                     <div className="contactLink">
-                        <Handshake />
+                        <Handshake className='contactIcon'/>
                         <a href="https://www.linkedin.com/in/daniel-courtney-7b9255331/">Linkedin</a>
                     </div>
 
                     <div className="contactLink">
-                        <Computer />
+                        <Computer className='contactIcon'/>
                         <a href="https://github.com/dan-1379">Github</a>
                     </div>
 
                     <div className="contactLink">
-                        <MapPin />
+                        <FileUser className='contactIcon'/>
+                        <a href="/DanielCourtneyCV1.pdf" download="DanielCourtneyCV">Curriculum vitae</a>
+                    </div>
+
+                    <div className="contactLink">
+                        <MapPin className='contactIcon'/>
                         <p>Kerry, Ireland</p>
                     </div>
                 </div>

@@ -7,7 +7,18 @@
     --text: #e8e8f0;
     --muted: #6b6b80;
     --card: #13131c;
-  }
+}
+
+body.light-mode {
+    --bg: #f0f0f5;
+    --surface: #e8e8f0;
+    --border: #c8c8d8;
+    --accent: #00a372;
+    --accent2: #4040cc;
+    --text: #0a0a0f;
+    --muted: #55556b;
+    --card: #dddde8;
+}
 
 html {
     scroll-behavior: smooth;
@@ -100,12 +111,12 @@ screen and (min-width: 900px) {
     padding: 0.2em;
 }
 
-.mobileNavMenu button {
+.mobileNavMenu button, .navbar-links button, .mobileNavbar-links button {
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
-  color: white;
+  color: var(--text);
 }
 
 .lucide {
@@ -365,6 +376,15 @@ section h3 {
 
 .contactLink a:hover {
     border-bottom: 1px solid var(--accent);
+    color: var(--text);
+}
+
+.contactIcon {
+    color: var(--text);
+}
+
+.contactLink a:hover .contactIcon {
+    color: red;
 }
 
 /*

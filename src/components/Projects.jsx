@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ProjectCard from "./ProjectCard"
 
 const Projects = () => {
@@ -53,8 +54,9 @@ const Projects = () => {
     return (
         <section id="projects">
             <h2>Projects</h2>
+
             {projects.map((project, index) => (
-                <ProjectCard key = {index} {...project}/>
+                <ProjectCard key = {index} {...project} />
             ))}
         </section>
     )
