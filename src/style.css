@@ -67,32 +67,6 @@ nav {
     color: var(--text);
 }
 
-@media screen and (max-width: 700px), 
-screen and (max-height: 500px) and (orientation: landscape) {
-    .navbar-links {
-        display: none;
-    }
-
-    .header-image img {
-        display: none; 
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-}
-
-@media screen and (min-width: 700px) and (orientation: portrait),
-screen and (min-width: 900px) {
-    .mobileNavMenu {
-        display: none;
-    }
-
-    .mobileNavbar-links {
-        display: none;
-    }
-}
-
 .mobileNavbar-links {
     align-items: center;
     background-color: var(--card);
@@ -321,7 +295,7 @@ section h3 {
     font-size: 0.9em;
 }
 
-.projectCard span {
+.projectCard span, .contentText span {
     border: 1px solid var(--border);
     color: var(--muted);
     padding: 0.5em 1em;
@@ -351,6 +325,106 @@ section h3 {
 .externalLinks {
     display: flex;
     gap: 2em;
+}
+
+.viewMore {
+    margin-top: 1em;
+}
+
+.viewMore button {
+    background-color: var(--accent);
+    color: var(--bg);
+    margin: 1em 0em;
+    padding: 0.75rem 1.8rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+}
+
+.viewMore button:hover i {
+    transform: translateX(0.2em);
+}
+
+.overlay {
+    background-color: black;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    inset: 0;
+    background-color: var(--card);
+    height: max-content;
+    z-index: 20;
+    align-self: center;
+    margin: 2em;
+    border-radius: 2em;
+}
+
+.content button {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    padding: 0.9em 1.2em;
+    background-color: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: 50%;
+    font-size: 1em;
+    margin-bottom: 1em;
+    z-index: 1;
+}
+
+.imageContainer img {
+    width: 100%;
+    max-width: 1000px;
+    height: 20em;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    border-radius: 2em 2em 0 0;
+    position: relative;
+}
+
+.contentText {
+    padding: 1.5em;
+    align-self: center;
+}
+
+.carousel {
+    position: relative;
+}
+
+.carouselButtons {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5em;
+    gap: 1em;
+    padding: 0.5em;
+    position: absolute;
+    bottom: -1em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content .carouselButton {
+    position: static;
+    top: unset;
+    right: unset;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    background-color: var(--accent);
+    color: var(--bg);
+    border: none;
+    font-size: 1.2em;
+    width: 20%;
 }
 
 /*
@@ -414,4 +488,47 @@ footer {
     height: 1em;
     padding: 0.5em;
     text-align: center;
+}
+
+@media screen and (max-width: 700px), 
+screen and (max-height: 500px) and (orientation: landscape) {
+    .navbar-links {
+        display: none;
+    }
+
+    .header-image img {
+        display: none; 
+    }
+
+    .content{
+        flex-direction: column;
+    }
+
+    .content img {
+        border-radius: 2em 2em 0 0em;
+    }
+}
+
+@media screen and (min-width: 700px) and (orientation: portrait),
+screen and (min-width: 900px) {
+    .mobileNavMenu {
+        display: none;
+    }
+
+    .mobileNavbar-links {
+        display: none;
+    }
+
+    .content {
+        height: 30em;
+    }
+
+    .imageContainer {
+        width: 160vw;
+    }
+
+    .content img {
+        border-radius: 2em 0 0 2em;
+        height: 30em;
+    }
 }
