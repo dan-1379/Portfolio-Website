@@ -27,7 +27,7 @@ const Contact = () => {
 
                     <div className="contactLink">
                         <FileUser className='contactIcon'/>
-                        <a href="/DanielCourtneyCV1.pdf" download="DanielCourtneyCV">Curriculum vitae</a>
+                        <a href="/DanielCourtneyCV1.pdf" download="DanielCourtneyCV">Curriculum Vitae</a>
                     </div>
 
                     <div className="contactLink">

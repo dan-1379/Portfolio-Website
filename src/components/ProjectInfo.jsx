@@ -1,0 +1,112 @@
+// Interail Journey
+import interrailJourney from "../assets/MyInterrailJourney/interrailJourney.jpeg";
+import london from "../assets/MyInterrailJourney/london.jpeg";
+import amsterdam from "../assets/MyInterrailJourney/amsterdam.jpeg";
+import berlin from "../assets/MyInterrailJourney/berlin.jpeg";
+import prague from "../assets/MyInterrailJourney/prague.jpeg";
+import munich from "../assets/MyInterrailJourney/munich.jpeg";
+import paris from "../assets/MyInterrailJourney/paris.jpeg";
+
+// Crann Centre Fundraising
+import crannVisit from "../assets/CrannCentreFundraising/CrannVisit.jpeg";
+import presentationRoom from "../assets/CrannCentreFundraising/PresentationRoom.jpeg";
+import image1 from "../assets/CrannCentreFundraising/Image.jpeg";
+import image2 from "../assets/CrannCentreFundraising/Image2.jpeg";
+
+// Budget Tracker
+import BudgetManager from "../assets/BudgetManager/BudgetManager.jpg";
+
+// Todo List Tracker
+import TodoTracker from "../assets/TodoTracker/TodoTracker.png";
+
+// Skuluggery Pleasant Project
+import Homepage from "../assets/SkulduggeryPleasant/Homepage.png";
+import Books from "../assets/SkulduggeryPleasant/Books.png";
+import Characters from "../assets/SkulduggeryPleasant/Characters.png";
+
+// Library System
+import LibrarySYS from "../assets/LibrarySYS/LibrarySYS.jpg";
+
+// Library System PHP
+import SignIn from "../assets/LibrarySYS-PHP/SignIn.png";
+import Dashboard from "../assets/LibrarySYS-PHP/Dashboard.png";
+import Members from "../assets/LibrarySYS-PHP/Members.png";
+import LoanConfirmation from "../assets/LibrarySYS-PHP/LoanConfirmation.png";
+import LoanReceipt from "../assets/LibrarySYS-PHP/LoanReceipt.png";
+
+export const ProjectInfo = [
+        {
+            name:"Library System (PHP)", 
+            description:"LibrarySYS is a web-based, intuitive library management system designed to support the daily operation of a library.", 
+            tech:["PHP", "MariaDB", "FPDF"],
+            github: "https://github.com/dan-1379/LibrarySYS-PHP",
+            images: [SignIn, Dashboard, Members, LoanConfirmation, LoanReceipt],
+            overview: "This is a project I designed and implemented using HTML, CSS, JS, and PHP that simulates a library management system web application.  The application provides functionality to assist library staff such as CRUD functionality, and Transaction Processing.",
+            dateFrom: "Mar 2026",
+            dateTo: "May 2026"
+        },
+        {
+            name:"Library System (C#)",
+            description:"Windows Forms library system using with an Oracle backend. Includes IronPDF integration for reports, and chart-based analytics.",
+            tech:["C#", "OracleDB"],
+            github: "https://github.com/dan-1379/LibrarySYS",
+            images: [LibrarySYS],
+            overview: "This is a project I designed and implemented using C# that simulates a library system. The software provides functionality to assist library staff such as CRUD functionality, Transaction Processing, and Data Analytics. The main goal of this project was to design the architecture of the system, using elements such as use case diagrams and narratives, DFD diagrams, UML diagrams, and database schemas.",
+            dateFrom: "Sep 2025",
+            dateTo: "April 2026"
+        },
+        {
+            name:"Skulduggery Pleasant Project",
+            description:"Wiki website built using ReactJS and TailwindCSS based on the popular book series Skulduggery Pleasant written by Irish author Derek Landy.",
+            tech:["ReactJS", "TailwindCSS"],
+            github: "https://github.com/dan-1379/Skulduggery-Pleasant-Project",
+            images: [Homepage, Books, Characters],
+            overview: "This is a personal project I designed and implemented using React JS and Tailwind CSS to create wiki website based on the popular book series Skulduggery Pleasant written by Irish author Derek Landy. The website displays the book and character information, allowing users to read the synopsis of each book as well as reading character information such as powers and age. The character page also contains filter functionality, allowing users to display all characters, heroes, and villains.",
+            dateFrom: "Jan 2026",
+            dateTo: "Jan 2026"
+        },
+        {
+            name:"Todo List Tracker",
+            description:"Todo list tracker built using ReactJS and TailwindCSS. Allows users to add todos, which can then be completed or deleted.",
+            tech:["ReactJS", "TailwindCSS"],
+            github: "https://github.com/dan-1379/Todo-App",
+            demo: "https://dancourtneytodo.vercel.app/",
+            images: [TodoTracker],
+            overview:"Todo list tracker built using ReactJS and TailwindCSS. Allows users to add todos, which can then be completed or deleted.",
+            dateFrom: "Jan 2026",
+            dateTo: "Jan 2026"
+        },
+        {
+            name:"Budget Tracker",
+            description:"Budget tracking web application allowing convenient tracking of income and expenditure.",
+            tech:["HTML", "CSS", "JS"],
+            github:"https://github.com/dan-1379/Client-Side-Scripting",
+            demo: "https://client-side-scripting.vercel.app",
+            images: [BudgetManager],
+            overview: "This is a project I designed and coded using HTML, CSS and JavaScript to build a budget tracker as part of my 2nd year semester 1 client side scripting module. The tracker allows users to enter an income/expense, which is then added to a table for convenient record tracking. A data analytics page was also created to present the users income and expenses in a visual format by way of a pie chart.",
+            dateFrom: "Nov 2025",
+            dateTo: "Dec 2025"
+        },
+        {
+            name:"Crann Centre Fundraising",
+            description:"This project is a fictitious website aiming to secure funding for The Crann Centre, a Cork based charity who provide support to people with neuro-physical disabilities.",
+            tech:["HTML", "CSS", "JS"],
+            github:"https://github.com/dan-1379/Web-Development-Semester-2",
+            demo: "https://web-development-semester-2.vercel.app/",
+            images: [crannVisit, presentationRoom, image1, image2],
+            overview: "This is a project I designed and coded using HTML, CSS and JavaScript to build a fictitious fundraiser website for The Crane Centre  as part of my 1st year semester 2 Web Development module.",
+            dateFrom: "Apr 2025",
+            dateTo: "May 2025"
+        },
+        {
+            name:"My Interrail Journey",
+            description:"Interrail website that documents a personal interrailing trip across Europe, featuring travel photography from various cities, alongside journey details and travel advice.",
+            tech:["HTML", "CSS", "JS"],
+            github:"https://github.com/dan-1379/Web-Development-Semester-1",
+            demo: "https://web-development-semester-1.vercel.app/",
+            images: [interrailJourney, london, amsterdam, berlin, prague, munich, paris],
+            overview:"Interrail website that documents a personal interrailing trip across Europe, featuring travel photography from various cities, alongside journey details and travel advice.",
+            dateFrom: "Nov 2025",
+            dateTo: "Dec 2025"
+        },
+];

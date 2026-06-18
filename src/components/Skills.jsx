@@ -33,7 +33,7 @@ const Skills = () => {
                 <SkillCard icon = "devicon-jupyter-plain" name = "Jupyter" color = "#f27726"/>
                 <SkillCard icon = "devicon-mariadb-plain" name = "MariaDB" color = "#003545"/>
 
-                <SkillCard icon = "devicon-sqldeveloper-plain" name = "SQLDeveloper" color = "#d1d1d1"/>
+                <SkillCard icon = "devicon-sqldeveloper-plain" name = "SQL Developer" color = "#d1d1d1"/>
                 <SkillCard icon = "devicon-vscode-plain" name = "VSCode" color = "#2babf3"/>
                 <SkillCard icon = "devicon-vscodium-plain" name = "VSCodium" color = "#296cbf"/>
             </div>

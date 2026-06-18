@@ -1,9 +1,15 @@
 import EducationCard from "./EducationCard"
+import ExperienceCard from "./ExperienceCard"
+import headshot from '../assets/headshot.JPG'
 
 const About = () => {
     return (
         <section id="about">
             <h2>About Me</h2>
+
+             <div className="about-headshot">
+                <img src={headshot} alt="headshot" />
+            </div>
 
             <p>
                 I am a second-year <span>Computing with Software Development</span> student at Munster Technological
@@ -27,6 +33,12 @@ const About = () => {
             <div className="education">
                 <EducationCard name= "Munster Technological University" qualification = "BSc Computing with Software Development" fromDate = "2024" toDate = "2028" additional = "First Class Honours Track" />
                 <EducationCard name= "Killorglin Community College" qualification = "Leaving Certificate" fromDate = "2016" toDate = "2022" additional = "7 subjects at honours level" />
+            </div>
+
+            <h3>Experience</h3>
+            <div className="experience">
+                <ExperienceCard role = "Summer Intern" company = "Fexco" fromDate = "May 2025" toDate = "Sep 2025" />
+                <ExperienceCard role = "Customer Service Representitive" company = "Fexco" fromDate = "Jul 2022" toDate = "Sep 2024" />
             </div>
         </section>
     )
