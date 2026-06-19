@@ -1,6 +1,7 @@
 const ProjectCard = (props) => {
     return (
         <div className="projectCard">
+            <div className="projectCardIcon">{props.icon}</div>
            <h3>{props.name}</h3>
            <p>{props.description}</p>
            <div className="techStack">
@@ -15,7 +16,7 @@ const ProjectCard = (props) => {
            </div>
 
            <div className="viewMore">
-            <button onClick={() => props.openLearnMore(props)}>Learn More <i>→</i></button>
+            <button onClick={() => props.openLearnMore(props)}>Learn More</button>
            </div>
         </div>
     )

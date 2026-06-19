@@ -1,3 +1,5 @@
+import { TramFront, HandCoins, Hand, PiggyBank, ListChecks, Skull, Library, LibraryBig } from 'lucide-react';
+
 // Interail Journey
 import interrailJourney from "../assets/MyInterrailJourney/interrailJourney.jpeg";
 import london from "../assets/MyInterrailJourney/london.jpeg";
@@ -36,6 +38,7 @@ import LoanReceipt from "../assets/LibrarySYS-PHP/LoanReceipt.png";
 
 export const ProjectInfo = [
         {
+            icon: <LibraryBig className="projectIcon" />,
             name:"Library System (PHP)", 
             description:"LibrarySYS is a web-based, intuitive library management system designed to support the daily operation of a library.", 
             tech:["PHP", "MariaDB", "FPDF"],
@@ -46,6 +49,7 @@ export const ProjectInfo = [
             dateTo: "May 2026"
         },
         {
+            icon: <Library className="projectIcon" />,
             name:"Library System (C#)",
             description:"Windows Forms library system using with an Oracle backend. Includes IronPDF integration for reports, and chart-based analytics.",
             tech:["C#", "OracleDB"],
@@ -56,6 +60,7 @@ export const ProjectInfo = [
             dateTo: "April 2026"
         },
         {
+            icon: <Skull className="projectIcon" />,
             name:"Skulduggery Pleasant Project",
             description:"Wiki website built using ReactJS and TailwindCSS based on the popular book series Skulduggery Pleasant written by Irish author Derek Landy.",
             tech:["ReactJS", "TailwindCSS"],
@@ -66,6 +71,7 @@ export const ProjectInfo = [
             dateTo: "Jan 2026"
         },
         {
+            icon: <ListChecks className="projectIcon" />,
             name:"Todo List Tracker",
             description:"Todo list tracker built using ReactJS and TailwindCSS. Allows users to add todos, which can then be completed or deleted.",
             tech:["ReactJS", "TailwindCSS"],
@@ -77,6 +83,7 @@ export const ProjectInfo = [
             dateTo: "Jan 2026"
         },
         {
+            icon: <PiggyBank className="projectIcon" />,
             name:"Budget Tracker",
             description:"Budget tracking web application allowing convenient tracking of income and expenditure.",
             tech:["HTML", "CSS", "JS"],
@@ -88,6 +95,7 @@ export const ProjectInfo = [
             dateTo: "Dec 2025"
         },
         {
+            icon: <HandCoins className="projectIcon" />,
             name:"Crann Centre Fundraising",
             description:"This project is a fictitious website aiming to secure funding for The Crann Centre, a Cork based charity who provide support to people with neuro-physical disabilities.",
             tech:["HTML", "CSS", "JS"],
@@ -99,6 +107,7 @@ export const ProjectInfo = [
             dateTo: "May 2025"
         },
         {
+            icon: <TramFront className="projectIcon" />,
             name:"My Interrail Journey",
             description:"Interrail website that documents a personal interrailing trip across Europe, featuring travel photography from various cities, alongside journey details and travel advice.",
             tech:["HTML", "CSS", "JS"],
@@ -107,6 +116,6 @@ export const ProjectInfo = [
             images: [interrailJourney, london, amsterdam, berlin, prague, munich, paris],
             overview:"Interrail website that documents a personal interrailing trip across Europe, featuring travel photography from various cities, alongside journey details and travel advice.",
             dateFrom: "Nov 2025",
-            dateTo: "Dec 2025"
+            dateTo: "Dec 2025",
         },
 ];
