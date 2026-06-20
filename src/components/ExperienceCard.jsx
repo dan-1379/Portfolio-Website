@@ -1,29 +1,36 @@
+import propTypes from "prop-types"
+import { BriefcaseBusiness } from 'lucide-react';
+
+/**
+ * Displays a work experience entry in card format.
+ * 
+ * @param {Object} props 
+ * @param {string} props.role - Job title
+ * @param {string} props.company - Company name
+ * @param {string} props.fromDate - Start date
+ * @param {string} props.toDate - End date
+ * @param {string} props.duration - Length of time in role
+ * @returns Experience Card
+ */
 const ExperienceCard = (props) => {
-    const fromMonth = new Date(props.fromDate).getMonth();
-    const fromYear = new Date(props.fromDate).getFullYear();
-
-    const toMonth = new Date(props.toDate).getMonth();
-    const toYear = new Date(props.toDate).getFullYear();
-
-    let totalMonths = (toYear - fromYear) * 12 + (toMonth - fromMonth);
-    const yearCount = Math.floor(totalMonths / 12);
-    const monthCount = totalMonths % 12;
-
-    const years = yearCount > 1 ? 's' : '';
-    const months = monthCount > 1 ? 's' : '';
-
-    let duration = '';
-    if (yearCount > 0) duration += `${yearCount} years `;
-    if (monthCount > 0) duration += `${monthCount} months`;
 
     return (
         <div className="educationCard">
+            <div className="educationCardIcon">{<BriefcaseBusiness />}</div>
             <h4>{props.role}</h4>
             <p>
-                {props.company} · {props.fromDate} - {props.toDate} ({duration})
+                {props.company} · {props.fromDate} - {props.toDate} ({props.duration})
             </p>
         </div>
     )
+}
+
+ExperienceCard.propTypes = {
+    role: propTypes.string.isRequired,
+    company: propTypes.string.isRequired,
+    fromDate: propTypes.string.isRequired,
+    toDate: propTypes.string.isRequired,
+    duration: propTypes.string.isRequired
 }
 
 export default ExperienceCard

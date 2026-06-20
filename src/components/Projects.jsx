@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import { ProjectInfo } from "./ProjectInfo";
+import { ChevronRight, ChevronLeft, X } from "lucide-react";
 
 const Projects = () => {
     const[learnMore, setLearnMore] = useState(null);
@@ -33,7 +34,7 @@ const Projects = () => {
 
                     <div className="content">
                         <div className="imageContainer">
-                            <button onClick={closeLearnMore}>x</button>
+                            <button onClick={closeLearnMore}><X className="contentExit" /></button>
 
                             <div className="carousel"> 
                                 <img src={learnMore.images ? learnMore.images[currentImage] : learnMore.image} alt={learnMore.name} />
@@ -42,11 +43,11 @@ const Projects = () => {
                             
                                 <div className="carouselButtons">
                                     {learnMore.images && learnMore.images.length > 1 && (
-                                        <button className="carouselButton" onClick={prevImage}>‹</button>
+                                        <button className="carouselButton" onClick={prevImage}><ChevronLeft /></button>
                                     )}
                                         
                                     {learnMore.images && learnMore.images.length > 1 && (
-                                        <button className="carouselButton" onClick={nextImage}>›</button>
+                                        <button className="carouselButton" onClick={nextImage}><ChevronRight /></button>
                                     )}
                                 </div>
                             </div>

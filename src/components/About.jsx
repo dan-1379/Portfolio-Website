@@ -37,8 +37,8 @@ const About = () => {
 
             <h3>Experience</h3>
             <div className="experience">
-                <ExperienceCard role = "Summer Intern" company = "Fexco" fromDate = "May 2025" toDate = "Sep 2025" />
-                <ExperienceCard role = "Customer Service Representitive" company = "Fexco" fromDate = "Jul 2022" toDate = "Sep 2024" />
+                <ExperienceCard role = "Summer Intern" company = "Fexco" fromDate = "May 2025" toDate = "Sep 2025" duration = "4 months"/>
+                <ExperienceCard role = "Customer Service Representitive" company = "Fexco" fromDate = "Jul 2022" toDate = "Sep 2024" duration = "2 years 2 months"/>
             </div>
         </section>
     )

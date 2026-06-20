@@ -5,7 +5,7 @@ import Skills from './components/Skills.jsx'
 import Projects from './components/Projects.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
-import { ArrowBigUp } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
-      <a href="#" className = "backToTop"><ArrowBigUp className='backToTopArrow'/></a>
+      <a href="#" className = "backToTop"><ArrowUp className='backToTopArrow'/></a>
     </>
   )
 }

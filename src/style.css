@@ -133,6 +133,10 @@ header p {
     text-decoration: none;
 }
 
+.hero-buttons a:active {
+    scale: 95%;
+}
+
 .heroButton-projects {
     background-color: var(--accent);
     color: var(--bg);
@@ -183,6 +187,10 @@ section:nth-child(odd) {
   border-radius: 5%;
 }
 
+.about-headshot img:hover {
+    filter: grayscale(100%);
+}
+
 .about-headshot img {
     display: none;
 }
@@ -220,6 +228,11 @@ section h3 {
 
 .educationCard:hover {
     background-color: var(--bg);
+}
+
+.educationCard:hover .educationCardIcon svg {
+    transform: rotate(15deg) scale(1.1);
+    transition: 0.5s ease-in-out;
 }
 
 .educationCard h4 {
@@ -286,10 +299,19 @@ section h3 {
     PROJECTS
 */
 .projectCard {
-    background-color: var(--card);
+    background-color: var(--surface);
     padding: 2em;
     border: 1px solid var(--border);
     margin-top: 2em;
+}
+
+.projectCard:hover {
+    background-color: var(--card);
+}
+
+.projectCard:hover .projectCardIcon svg {
+    transform: rotate(15deg) scale(1.1);
+    transition: 0.5s ease-in-out;
 }
 
 .projectCard h3 {
@@ -360,10 +382,23 @@ section h3 {
     text-transform: uppercase;
     text-decoration: none;
     border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.viewMore button:hover i {
+.viewMore button:hover .learnMoreArrow {
     transform: translateX(0.2em);
+}
+
+.viewMore button:active {
+    scale: 90%;
+}
+
+.learnMoreArrow {
+    width: 1.5em;
+    height: 1.5em;
 }
 
 .overlay {
@@ -386,14 +421,14 @@ section h3 {
     align-items: flex-start;
     margin: 2em;
     border-radius: 2em;
+    max-height: -webkit-fill-available;
 }
 
 .content button {
     position: absolute;
     top: 1em;
     right: 1em;
-    padding: 0.9em 1.2em;
-    /* background-color: var(--accent); */
+    padding: 0.8em 1em;
     background-color: red;
     color: var(--bg);
     border: none;
@@ -401,6 +436,20 @@ section h3 {
     font-size: 1em;
     margin-bottom: 1em;
     z-index: 1;
+    cursor: pointer;
+}
+
+.content > button:first-child:hover {
+    background-color: rgb(233, 2, 2);
+}
+
+.content button:active {
+    scale: 90%;
+}
+
+.contentExit {
+    width: 1.2em;
+    height: 1.2em;
 }
 
 .imageContainer {
@@ -530,6 +579,14 @@ footer {
     height: 1em;
     padding: 0.5em;
     text-align: center;
+}
+
+.backToTop:hover {
+    color: var(--surface);
+}
+
+.backToTop:active {
+    scale: 90%;
 }
 
 @media screen and (max-width: 1260px) and (min-width: 701px) {
