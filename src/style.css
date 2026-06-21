@@ -665,9 +665,10 @@ screen and (max-height: 500px) and (orientation: landscape) {
 
     .content{
         flex-direction: column;
-        max-height: min(85vh, 700px);
+        height: 85vh;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+        padding-bottom: env(safe-area-inset-bottom);
     }
 
     .content .carouselButton {
