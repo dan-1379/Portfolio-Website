@@ -34,12 +34,16 @@ const Projects = () => {
 
                     <div className="content">
                         <div className="imageContainer">
-                            <button onClick={closeLearnMore}><X className="contentExit" /></button>
+                            <button onClick={closeLearnMore} className="contentExitContainer"><X className="contentExit" /></button>
 
                             <div className="carousel"> 
-                                <img src={learnMore.images ? learnMore.images[currentImage] : learnMore.image} alt={learnMore.name} />
+                                <img src={learnMore.images ? learnMore.images[currentImage].image : learnMore.image} 
+                                     alt={learnMore.name ? learnMore.images[currentImage].description : learnMore.name} />
 
-                                {learnMore.images.length > 1 ? <div className="imageCount">{currentImage + 1} / {learnMore.images.length}</div> : <div></div>}
+                                <div className="imageInfo">
+                                    {learnMore.images.length > 1 ? <div className="imageCount">{currentImage + 1} / {learnMore.images.length}</div> : <div></div>}
+                                    {learnMore.images[currentImage].description ? <div className="imageDescription">{learnMore.images[currentImage].description}</div> : <div></div>}
+                                </div>
                             
                                 <div className="carouselButtons">
                                     {learnMore.images && learnMore.images.length > 1 && (
