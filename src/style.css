@@ -419,6 +419,8 @@ section h3 {
     flex-direction: row;
     position: fixed;
     inset: 0;
+    bottom: calc(-1 * env(safe-area-inset-bottom));
+    padding-bottom: env(safe-area-inset-bottom);
     background-color: var(--card);
     z-index: 20;
     align-self: center;
@@ -663,10 +665,9 @@ screen and (max-height: 500px) and (orientation: landscape) {
 
     .content{
         flex-direction: column;
-        max-height: 90vh;
+        max-height: min(85vh, 700px);
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        padding-bottom: env(safe-area-inset-bottom);
     }
 
     .content .carouselButton {
