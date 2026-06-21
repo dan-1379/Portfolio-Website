@@ -29,7 +29,7 @@ const Projects = () => {
             ))}
 
             {learnMore && 
-                <div>
+                <>
                     <div className="overlay" onClick={closeLearnMore}></div>
 
                     <div className="content">
@@ -65,7 +65,7 @@ const Projects = () => {
                             <p>{learnMore.overview}</p>
                         </div>
                     </div>
-                </div>
+                </>
             }
         </section>
     )
