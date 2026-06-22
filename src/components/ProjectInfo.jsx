@@ -27,7 +27,7 @@ import TodoTracker from "../assets/TodoTracker/TodoTracker.png";
 import TodoItems from "../assets/Todotracker/TodoItems.png";
 import MobileView from "../assets/Todotracker/MobileView.png";
 
-// Skuluggery Pleasant Project
+// Skulduggery Pleasant Project
 import Homepage from "../assets/SkulduggeryPleasant/Homepage.png";
 import Books from "../assets/SkulduggeryPleasant/Books.png";
 import Characters from "../assets/SkulduggeryPleasant/Characters.png";
@@ -67,7 +67,7 @@ export const ProjectInfo = [
             tech:["C#", "OracleDB"],
             github: "https://github.com/dan-1379/LibrarySYS",
             images: [
-                {image: LibrarySYS}
+                {image: LibrarySYS, description: "Library system background"}
             ],
             overview: "This is a project I designed and implemented using C# that simulates a library system. The software provides functionality to assist library staff such as CRUD functionality, Transaction Processing, and Data Analytics. The main goal of this project was to design the architecture of the system, using elements such as use case diagrams and narratives, DFD diagrams, UML diagrams, and database schemas.",
             dateFrom: "Sep 2025",
@@ -131,7 +131,7 @@ export const ProjectInfo = [
             demo: "https://web-development-semester-2.vercel.app/",
             images: [
                 {image: crannVisit, description: "Visit to crann"}, 
-                {image: presentationRoom, description: "Innovation challenge"}, 
+                {image: presentationRoom, description: "Presentation room"}, 
                 {image: image1, description: "Innovation challenge"}, 
                 {image: image2, description: "Team photo"}
             ],
@@ -156,7 +156,7 @@ export const ProjectInfo = [
                 {image: paris, description: "Paris"}
             ],
             overview:"Interrail website that documents a personal interrailing trip across Europe, featuring travel photography from various cities, alongside journey details and travel advice.",
-            dateFrom: "Nov 2025",
-            dateTo: "Dec 2025",
+            dateFrom: "Nov 2024",
+            dateTo: "Dec 2024",
         },
 ];

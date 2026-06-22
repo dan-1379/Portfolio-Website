@@ -1,4 +1,4 @@
-import { Mail, Handshake, Computer, MapPin, FileUser, ArrowBigUp } from 'lucide-react';
+import { Mail, Handshake, Computer, MapPin, FileUser } from 'lucide-react';
 
 const Contact = () => {
     return (
@@ -11,27 +11,27 @@ const Contact = () => {
                 </p>
                 <div className="contactLinks">
                     <div className="contactLink">
-                        <Mail className='contactIcon'/>
+                        <Mail className='contactIcon' aria-hidden = "true"/>
                         <a href="mailto:daniel1courtney3@gmail.com">Email</a>
                     </div>
 
                     <div className="contactLink">
-                        <Handshake className='contactIcon'/>
-                        <a href="https://www.linkedin.com/in/daniel-courtney-7b9255331/">Linkedin</a>
+                        <Handshake className='contactIcon' aria-hidden = "true"/>
+                        <a href="https://www.linkedin.com/in/daniel-courtney-7b9255331/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     </div>
 
                     <div className="contactLink">
-                        <Computer className='contactIcon'/>
-                        <a href="https://github.com/dan-1379">Github</a>
+                        <Computer className='contactIcon' aria-hidden = "true"/>
+                        <a href="https://github.com/dan-1379" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
 
                     <div className="contactLink">
-                        <FileUser className='contactIcon'/>
+                        <FileUser className='contactIcon' aria-hidden = "true"/>
                         <a href="/DanielCourtneyCV1.pdf" download="DanielCourtneyCV">Curriculum Vitae</a>
                     </div>
 
                     <div className="contactLink">
-                        <MapPin className='contactIcon'/>
+                        <MapPin className='contactIcon' aria-hidden = "true"/>
                         <p>Kerry, Ireland</p>
                     </div>
                 </div>

@@ -21,7 +21,17 @@ function App() {
         <Contact />
       </main>
       <Footer />
-      <a href="#" className = "backToTop"><ArrowUp className='backToTopArrow'/></a>
+      <a 
+        href="#" 
+        className = "backToTop" 
+        aria-label='Back to top'
+        onClick={(e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth"})
+        }}
+      >
+        <ArrowUp className='backToTopArrow' aria-hidden="true"/>
+      </a>
     </>
   )
 }

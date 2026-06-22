@@ -12,7 +12,7 @@ const Projects = () => {
         setCurrentImage(0);
     }
 
-    const closeLearnMore = (project) => {
+    const closeLearnMore = () => {
         setLearnMore(null);
         setCurrentImage(0);
     }
@@ -32,13 +32,13 @@ const Projects = () => {
                 <>
                     <div className="overlay" onClick={closeLearnMore}></div>
 
-                    <div className="content">
+                    <div className="content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
                         <div className="imageContainer">
-                            <button onClick={closeLearnMore} className="contentExitContainer"><X className="contentExit" /></button>
+                            <button onClick={closeLearnMore} className="contentExitContainer" aria-label="Close project details"><X className="contentExit" /></button>
 
                             <div className="carousel"> 
                                 <img src={learnMore.images ? learnMore.images[currentImage].image : learnMore.image} 
-                                     alt={learnMore.name ? learnMore.images[currentImage].description : learnMore.name} />
+                                     alt={learnMore.images ? learnMore.images[currentImage].description : learnMore.name} />
 
                                 <div className="imageInfo">
                                     {learnMore.images.length > 1 ? <div className="imageCount">{currentImage + 1} / {learnMore.images.length}</div> : <div></div>}
@@ -47,11 +47,11 @@ const Projects = () => {
                             
                                 <div className="carouselButtons">
                                     {learnMore.images && learnMore.images.length > 1 && (
-                                        <button className="carouselButton" onClick={prevImage}><ChevronLeft /></button>
+                                        <button className="carouselButton" onClick={prevImage} aria-label="Previous image"><ChevronLeft /></button>
                                     )}
                                         
                                     {learnMore.images && learnMore.images.length > 1 && (
-                                        <button className="carouselButton" onClick={nextImage}><ChevronRight /></button>
+                                        <button className="carouselButton" onClick={nextImage} aria-label="Next image"><ChevronRight /></button>
                                     )}
                                 </div>
                             </div>
@@ -59,7 +59,7 @@ const Projects = () => {
 
 
                         <div className="contentText">
-                            <h3>{learnMore.name}</h3>
+                            <h3 id="modalTitle">{learnMore.name}</h3>
                             <span className="dates">{learnMore.dateFrom} - {learnMore.dateTo}</span>
                             <hr />
                             <p>{learnMore.overview}</p>

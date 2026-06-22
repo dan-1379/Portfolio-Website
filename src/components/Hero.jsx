@@ -7,7 +7,7 @@ const Hero = () => {
                 <h1>Software <br /> <span>Development</span> <br /> Student</h1>
 
                 <p>Second-year Computing student at MTU Kerry, with experience in building 
-                    applications with a focus on clearn architecture. 
+                    applications with a focus on clean architecture. 
                     Keen interest in software architecture and fintech.
                 </p>
 
@@ -18,7 +18,7 @@ const Hero = () => {
             </div>
 
             <div className="header-image">
-                <img src={headshot} alt="headshot" />
+                <img src={headshot} alt="Daniel Courtney headshot" />
             </div>
         </header>
     )

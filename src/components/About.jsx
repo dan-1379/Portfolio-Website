@@ -8,7 +8,7 @@ const About = () => {
             <h2>About Me</h2>
 
              <div className="about-headshot">
-                <img src={headshot} alt="headshot" />
+                <img src={headshot} alt="Daniel Courtney headshot" />
             </div>
 
             <p>

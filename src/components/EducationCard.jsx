@@ -15,7 +15,7 @@ import { GraduationCap } from "lucide-react"
 const EducationCard = (props) => {
     return (
         <div className="educationCard">
-            <div className="educationCardIcon"><GraduationCap /></div>
+            <div className="educationCardIcon"><GraduationCap aria-hidden = "true"/></div>
             <h4>{props.name}</h4>
             <p>{props.qualification} · {props.fromDate} - {props.toDate}</p>
             <span>{props.additional}</span>

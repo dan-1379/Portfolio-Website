@@ -16,7 +16,7 @@ const ExperienceCard = (props) => {
 
     return (
         <div className="educationCard">
-            <div className="educationCardIcon">{<BriefcaseBusiness />}</div>
+            <div className="educationCardIcon"><BriefcaseBusiness aria-hidden = "true"/></div>
             <h4>{props.role}</h4>
             <p>
                 {props.company} · {props.fromDate} - {props.toDate} ({props.duration})
