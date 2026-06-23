@@ -24,9 +24,11 @@ const Projects = () => {
         <section id="projects">
             <h2>Projects</h2>
 
-            {ProjectInfo.map((project, index) => (
-                <ProjectCard key = {index} {...project} openLearnMore = {openLearnMore} />
-            ))}
+            <div className="projectCards">
+                {ProjectInfo.map((project, index) => (
+                    <ProjectCard key = {index} {...project} openLearnMore = {openLearnMore} />
+                ))}
+            </div>
 
             {learnMore && 
                 <>

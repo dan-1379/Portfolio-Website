@@ -1,6 +1,7 @@
 import EducationCard from "./EducationCard"
 import ExperienceCard from "./ExperienceCard"
 import headshot from '../assets/headshot.JPG'
+import CertificationCard from "./CertificationCard"
 
 const About = () => {
     return (
@@ -39,6 +40,19 @@ const About = () => {
             <div className="experience">
                 <ExperienceCard role = "Summer Intern" company = "Fexco" fromDate = "May 2025" toDate = "Sep 2025" duration = "4 months"/>
                 <ExperienceCard role = "Customer Service Representitive" company = "Fexco" fromDate = "Jul 2022" toDate = "Sep 2024" duration = "2 years 2 months"/>
+            </div>
+
+            <h3>Certifications</h3>
+            <div className="certifications">
+                <CertificationCard certification = "EDGE Gold Award" organisation = "MTU" issueDate = "Apr 2026" credential = "https://my.potential.ly/folio/badge/bC5aH5IhLUAPsNus"/>
+                <CertificationCard certification = "Peer Mentoring" organisation = "MTU" issueDate = "Apr 2026" credential = ""/>
+                <CertificationCard certification = "MTU Joint Mentorship Programme" organisation = "MTU" issueDate = "Apr 2026" credential = ""/>
+
+                <CertificationCard certification = "Introduction to generative AI" organisation = "Microsoft" issueDate = "Apr 2026" credential = "https://learn.microsoft.com/en-gb/users/danielcourtney-2122/achievements/82uh5cpw?ref=https%3A%2F%2Fwww.linkedin.com%2F"/>
+                <CertificationCard certification = "EDGE Silver Award" organisation = "MTU" issueDate = "Sep 2025" credential = "https://my.potential.ly/folio/badge/ffUsqr5rAr4y4eth"/>
+                <CertificationCard certification = "EDGE Bronze Award" organisation = "MTU" issueDate = "Feb 2025" credential = "https://my.potential.ly/folio/badge/ihBHwVy4ph3K4Cwj"/>
+
+
             </div>
         </section>
     )

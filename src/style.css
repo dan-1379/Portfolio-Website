@@ -200,7 +200,7 @@ section p span {
 }
 
 section h3 {
-    font-size: 0.65rem;
+    font-size: 0.8em;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--accent);
@@ -258,6 +258,34 @@ section h3 {
     border-radius: 2px;
 }
 
+.certifications {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2em;
+}
+
+.educationCard a {
+    text-decoration: none;
+    color: var(--text);
+    margin-top: 1em;
+    display: block;
+    width: fit-content;
+    border: 1px solid var(--border);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    transition: 0.5s ease-in-out;
+}
+
+.educationCard a:hover {
+    background-color: var(--accent);
+    color: var(--bg);
+}
+
+.credentialIcon {
+    width: 1em;
+    height: 1em;
+}
+
 /*
     SKILLS
 */
@@ -298,7 +326,18 @@ section h3 {
 /*
     PROJECTS
 */
+.projectCards {
+    display: grid;
+    column-gap: 2em;
+    row-gap: 0.5em;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-rows: auto auto auto auto auto auto;
+}
+
 .projectCard {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 6;
     background-color: var(--surface);
     padding: 2em;
     border: 1px solid var(--border);
@@ -318,11 +357,13 @@ section h3 {
     color: var(--accent);
     font-size: 1em;
     align-content: center;
+    grid-row: 2;
 }
 
 .projectIcon {
     width: 2em;
     height: 2em;
+    grid-row: 1;
 }
 
 .mapIcon {
@@ -333,12 +374,14 @@ section h3 {
 .projectCard p {
     color: var(--muted);
     font-size: 0.9em;
+    grid-row: 3;
 }
 
 .techStack {
     display: flex;
     gap: 0.5em;
     font-size: 0.9em;
+    grid-row: 4;
 }
 
 .projectCard span, .contentText span {
@@ -364,17 +407,19 @@ section h3 {
     transition: 0.5s ease-in;
 }
 
-.githubLink:hover i {
+.githubLink:hover i{
     transform: translateX(0.2em);
 }
 
 .externalLinks {
     display: flex;
     gap: 2em;
+    grid-row: 5;
 }
 
 .viewMore {
     margin-top: 1em;
+    grid-row: 6;
 }
 
 .viewMore button {
@@ -404,6 +449,7 @@ section h3 {
 .learnMoreArrow {
     width: 1.5em;
     height: 1.5em;
+    transition: 0.5s ease-in-out;
 }
 
 .overlay {
@@ -660,6 +706,15 @@ screen and (max-height: 500px) and (orientation: landscape) {
     .languages, .frameworks, .tools {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
+
+    .certifications {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+
+    .projectCards {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+
 
     .content{
         flex-direction: column;

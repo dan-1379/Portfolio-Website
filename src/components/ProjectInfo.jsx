@@ -67,7 +67,7 @@ export const ProjectInfo = [
             tech:["C#", "OracleDB"],
             github: "https://github.com/dan-1379/LibrarySYS",
             images: [
-                {image: LibrarySYS, description: "Library system background"}
+                {image: LibrarySYS}
             ],
             overview: "This is a project I designed and implemented using C# that simulates a library system. The software provides functionality to assist library staff such as CRUD functionality, Transaction Processing, and Data Analytics. The main goal of this project was to design the architecture of the system, using elements such as use case diagrams and narratives, DFD diagrams, UML diagrams, and database schemas.",
             dateFrom: "Sep 2025",
@@ -159,4 +159,5 @@ export const ProjectInfo = [
             dateFrom: "Nov 2024",
             dateTo: "Dec 2024",
         },
+        
 ];
