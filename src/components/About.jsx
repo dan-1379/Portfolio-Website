@@ -51,8 +51,6 @@ const About = () => {
                 <CertificationCard certification = "Introduction to generative AI" organisation = "Microsoft" issueDate = "Apr 2026" credential = "https://learn.microsoft.com/en-gb/users/danielcourtney-2122/achievements/82uh5cpw?ref=https%3A%2F%2Fwww.linkedin.com%2F"/>
                 <CertificationCard certification = "EDGE Silver Award" organisation = "MTU" issueDate = "Sep 2025" credential = "https://my.potential.ly/folio/badge/ffUsqr5rAr4y4eth"/>
                 <CertificationCard certification = "EDGE Bronze Award" organisation = "MTU" issueDate = "Feb 2025" credential = "https://my.potential.ly/folio/badge/ihBHwVy4ph3K4Cwj"/>
-
-
             </div>
         </section>
     )

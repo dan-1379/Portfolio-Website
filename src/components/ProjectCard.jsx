@@ -1,4 +1,4 @@
-import { ChevronRight } from "lucide-react"
+import { ChevronRight, ExternalLink } from "lucide-react"
 import propTypes from "prop-types"
 
 /**
@@ -6,6 +6,7 @@ import propTypes from "prop-types"
  * 
  * @param {Object} props 
  * @param {React.ReactNode} props.icon - Icon element displayed
+ * @param {string} props.progress - Project progress (In Progress / Complete)
  * @param {string} props.name - Project name
  * @param {string} props.description - Project description
  * @param {string[]} props.tech - Technology names used
@@ -17,9 +18,18 @@ import propTypes from "prop-types"
 const ProjectCard = (props) => {
     return (
         <div className="projectCard">
-            <div className="projectCardIcon">{props.icon}</div>
+
+            <div className="projectCardIcon">
+                {props.icon}
+                {props.progress === "complete" ? 
+                    <div className="completedProject">Completed</div> : 
+                    <div className="inProgressProject">In Progress</div>}
+            </div>
+
             <h3>{props.name}</h3>
+
             <p>{props.description}</p>
+
             <div className="techStack">
                 {props.tech.map((tech, index) => (
                     <span key={index}>{tech}</span>
@@ -27,8 +37,8 @@ const ProjectCard = (props) => {
             </div>
 
             <div className="externalLinks">
-                <a href={props.github} target="_blank" rel="noopener noreferrer" className="githubLink">Github <i>→</i></a>
-                {props.demo && <a href={props.demo} target="_blank" rel="noopener noreferrer" className="githubLink">Demo <i>→</i></a> }
+                <a href={props.github} target="_blank" rel="noopener noreferrer" className="githubLink">Github <ExternalLink className="externalLinkIcon" /></a>
+                {props.demo && <a href={props.demo} target="_blank" rel="noopener noreferrer" className="githubLink">Demo <ExternalLink className="externalLinkIcon"/></a> }
             </div>
 
             <div className="viewMore">
@@ -40,6 +50,7 @@ const ProjectCard = (props) => {
 
 ProjectCard.propTypes = {
     icon: propTypes.node.isRequired,
+    progress: propTypes.string.isRequired,
     name: propTypes.string.isRequired,
     description: propTypes.string.isRequired,
     tech: propTypes.arrayOf(propTypes.string).isRequired,

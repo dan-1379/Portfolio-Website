@@ -44,7 +44,7 @@ const Projects = () => {
 
                                 <div className="imageInfo">
                                     {learnMore.images.length > 1 ? <div className="imageCount">{currentImage + 1} / {learnMore.images.length}</div> : <div></div>}
-                                    {learnMore.images[currentImage].description ? <div className="imageDescription">{learnMore.images[currentImage].description}</div> : <div></div>}
+                                    {/* {learnMore.images[currentImage].description ? <div className="imageDescription">{learnMore.images[currentImage].description}</div> : <div></div>} */}
                                 </div>
                             
                                 <div className="carouselButtons">

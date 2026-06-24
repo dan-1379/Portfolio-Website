@@ -2,12 +2,30 @@ import { TramFront, HandCoins, Hand, PiggyBank, ListChecks, Skull, Library, Libr
 
 // Interail Journey
 import interrailJourney from "../assets/MyInterrailJourney/interrailJourney.jpeg";
+
 import london from "../assets/MyInterrailJourney/london.jpeg";
+import boroughMarket from "../assets/MyInterrailJourney/boroughMarket.jpeg";
+import buckinghamPalace from "../assets/MyInterrailJourney/buckinghamPalace.jpg";
+
 import amsterdam from "../assets/MyInterrailJourney/amsterdam.jpeg";
+import vanGogh from "../assets/MyInterrailJourney/vanGogh.jpeg";
+import pancakes from "../assets/MyInterrailJourney/pancakes.jpeg";
+
 import berlin from "../assets/MyInterrailJourney/berlin.jpeg";
+import berlinHostel from "../assets/MyInterrailJourney/berlinHostel.jpeg";
+import berlinChurch from "../assets/MyInterrailJourney/berlinChurch.jpeg";
+
 import prague from "../assets/MyInterrailJourney/prague.jpeg";
+import pragueBridge from "../assets/MyInterrailJourney/pragueBridge.jpg";
+import pragueMuseum from "../assets/MyInterrailJourney/pragueMuseum.jpeg";
+
 import munich from "../assets/MyInterrailJourney/munich.jpeg";
+import munichGarden from "../assets/MyInterrailJourney/munichGarden.jpeg";
+import munichPalace from "../assets/MyInterrailJourney/munichPalace.jpeg";
+
 import paris from "../assets/MyInterrailJourney/paris.jpeg";
+import parisSkyline from "../assets/MyInterrailJourney/parisSkyline.jpeg";
+import parisImages from "../assets/MyInterrailJourney/parisImages.jpeg";
 
 // Crann Centre Fundraising
 import crannVisit from "../assets/CrannCentreFundraising/CrannVisit.jpeg";
@@ -58,7 +76,8 @@ export const ProjectInfo = [
             ],
             overview: "This is a project I designed and implemented using HTML, CSS, JS, and PHP that simulates a library management system web application.  The application provides functionality to assist library staff such as CRUD functionality, and Transaction Processing.",
             dateFrom: "Mar 2026",
-            dateTo: "May 2026"
+            dateTo: "May 2026",
+            progress: "complete"
         },
         {
             icon: <Library className="projectIcon" />,
@@ -71,7 +90,8 @@ export const ProjectInfo = [
             ],
             overview: "This is a project I designed and implemented using C# that simulates a library system. The software provides functionality to assist library staff such as CRUD functionality, Transaction Processing, and Data Analytics. The main goal of this project was to design the architecture of the system, using elements such as use case diagrams and narratives, DFD diagrams, UML diagrams, and database schemas.",
             dateFrom: "Sep 2025",
-            dateTo: "April 2026"
+            dateTo: "April 2026",
+            progress: "complete"
         },
         {
             icon: <Skull className="projectIcon" />,
@@ -86,7 +106,8 @@ export const ProjectInfo = [
             ],
             overview: "This is a personal project I designed and implemented using React JS and Tailwind CSS to create wiki website based on the popular book series Skulduggery Pleasant written by Irish author Derek Landy. The website displays the book and character information, allowing users to read the synopsis of each book as well as reading character information such as powers and age. The character page also contains filter functionality, allowing users to display all characters, heroes, and villains.",
             dateFrom: "Jan 2026",
-            dateTo: "Jan 2026"
+            dateTo: "Jan 2026",
+            progress: "complete"
         },
         {
             icon: <ListChecks className="projectIcon" />,
@@ -102,7 +123,8 @@ export const ProjectInfo = [
             ],
             overview:"Todo list tracker built using ReactJS and TailwindCSS. Allows users to add todos, which can then be completed or deleted.",
             dateFrom: "Jan 2026",
-            dateTo: "Jan 2026"
+            dateTo: "Jan 2026",
+            progress: "complete"
         },
         {
             icon: <PiggyBank className="projectIcon" />,
@@ -121,6 +143,7 @@ export const ProjectInfo = [
             overview: "This is a project I designed and coded using HTML, CSS and JavaScript to build a budget tracker as part of my 2nd year semester 1 client side scripting module. The tracker allows users to enter an income/expense, which is then added to a table for convenient record tracking. A data analytics page was also created to present the users income and expenses in a visual format by way of a pie chart.",
             dateFrom: "Nov 2025",
             dateTo: "Dec 2025",
+            progress: "complete"
         },
         {
             icon: <HandCoins className="projectIcon" />,
@@ -137,7 +160,8 @@ export const ProjectInfo = [
             ],
             overview: "This is a project I designed and coded using HTML, CSS and JavaScript to build a fictitious fundraiser website for The Crann Centre  as part of my 1st year semester 2 Web Development module. I decided on this idea as I had previously worked with Crann in an innovation challenge and loved the work they were doing.",
             dateFrom: "Apr 2025",
-            dateTo: "May 2025"
+            dateTo: "May 2025",
+            progress: "complete"
         },
         {
             icon: <TramFront className="projectIcon" />,
@@ -149,15 +173,28 @@ export const ProjectInfo = [
             images: [
                 {image: interrailJourney, description: "Eurostar"}, 
                 {image: london, description:  "London"}, 
+                {image: boroughMarket, description:  "Borough Market"}, 
+                {image: buckinghamPalace, description:  "Buckingham Palace"}, 
                 {image: amsterdam, description: "Amsterdam"}, 
-                {image: berlin, description: "Berlin"}, 
-                {image: prague, description: "Prague"}, 
+                {image: vanGogh, description: "Van Gogh Museum"}, 
+                {image: pancakes, description: "Pancakes"}, 
+                {image: berlin, description: "Berlin"},
+                {image: berlinHostel, description: "Berlin Circus Hostel"},
+                {image: berlinChurch, description: "Berlin Cathedral"},
+                {image: prague, description: "Prague"},
+                {image: pragueBridge, description: "Charles Bridge"},
+                {image: pragueMuseum, description: "Prague Museum"},
                 {image: munich, description: "Munich"}, 
-                {image: paris, description: "Paris"}
+                {image: munichPalace, description: "Nymphenburg Palace"}, 
+                {image: munichGarden, description: "Court Garden"}, 
+                {image: paris, description: "Paris"},
+                {image: parisSkyline, description: "Galeries Lafayette"},
+                {image: parisImages, description: "Galeries Lafayette"},
             ],
             overview:"Interrail website that documents a personal interrailing trip across Europe, featuring travel photography from various cities, alongside journey details and travel advice.",
             dateFrom: "Nov 2024",
             dateTo: "Dec 2024",
+            progress: "complete"
         },
         
 ];

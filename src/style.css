@@ -326,6 +326,7 @@ section h3 {
 /*
     PROJECTS
 */
+
 .projectCards {
     display: grid;
     column-gap: 2em;
@@ -348,9 +349,33 @@ section h3 {
     background-color: var(--card);
 }
 
+.projectCardIcon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .projectCard:hover .projectCardIcon svg {
     transform: rotate(15deg) scale(1.1);
     transition: 0.5s ease-in-out;
+}
+
+.completedProject {
+    background-color: var(--accent);
+    color: var(--bg);
+    width: fit-content;
+    padding: 0.6em 1em;
+    border-radius: 0.5em;
+    opacity: 0.5;
+}
+
+.inProgressProject {
+    background-color: var(--muted);
+    color: var(--bg);
+    width: fit-content;
+    padding: 1em;
+    border-radius: 0.5em;
+    opacity: 0.5;
 }
 
 .projectCard h3 {
@@ -402,19 +427,17 @@ section h3 {
     border-bottom: 1px solid var(--accent);
 }
 
-.githubLink i {
-    display: inline-block;
-    transition: 0.5s ease-in;
-}
-
-.githubLink:hover i{
-    transform: translateX(0.2em);
-}
-
 .externalLinks {
     display: flex;
     gap: 2em;
     grid-row: 5;
+    align-items: center;
+}
+
+.externalLinkIcon {
+    width: 1em;
+    height: 1em;
+    transition: 0.5s ease-in-out;
 }
 
 .viewMore {
@@ -438,7 +461,7 @@ section h3 {
     align-items: center;
 }
 
-.viewMore button:hover .learnMoreArrow {
+.viewMore button:hover .learnMoreArrow{
     transform: translateX(0.2em);
 }
 
@@ -536,24 +559,28 @@ section h3 {
     color: var(--muted);
 }
 
-.imageCount {
+.imageInfo {
     position: absolute;
     top: 1em;
     left: 1em;
+    display: flex;
+    gap: 1em;
+}
+
+.imageCount {
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 0.2em 0.5em;
     border-radius: 0.3em;
+    width: fit-content;
 }
 
 .imageDescription {
-    position: absolute;
-    top: 1em;
-    left: 6em;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 0.2em 0.5em;
     border-radius: 0.3em;
+    width: fit-content;
 }
 
 .carousel {
@@ -740,10 +767,8 @@ screen and (max-height: 500px) and (orientation: landscape) {
         object-fit: cover;
     }
 
-    .imageDescription {
-        position: absolute;
-        top: 3em;
-        left: 1em;
+    .imageInfo {
+        flex-direction: column;
     }
 }
 
