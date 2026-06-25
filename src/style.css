@@ -36,10 +36,20 @@ body {
 
 nav {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 0.5em 1em;
     border-bottom: 2px solid var(--border);
+}
+
+nav > button {
+    display: none;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--text);
 }
 
 .navbar-logo {
@@ -70,20 +80,64 @@ nav {
 .mobileNavbar-links {
     align-items: center;
     background-color: var(--card);
-    height: fit-content;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    animation: openNavMenu 0.3s ease-in-out;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes openNavMenu {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.navOverlay {
+    background-color: black;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    opacity: 0.8;
+    display: none;
+}
+
+.upperMenu {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    width: 100%;
+    align-items: center;
+}
+
+.upperMenu h3 {
+    font-size: 1em;
+    color: var(--text);
 }
 
 .navbar-links-mobile {
+    flex: 1;
     display: flex;
+    gap: 3em;
     flex-direction: column;
-    text-align: center;
     list-style-type: none;
+    justify-content: center;
 }
 
-.navbar-links-mobile li {
+.navbar-links-mobile li, .mobileNavbar-links button {
     margin: 1em;
     padding: 0.2em;
+    width: fit-content;
 }
+
 
 .mobileNavMenu button, .navbar-links button, .mobileNavbar-links button {
   background: none;
@@ -91,6 +145,20 @@ nav {
   padding: 0;
   cursor: pointer;
   color: var(--text);
+}
+
+.navbar-links-mobile li a {
+    display: flex;
+    gap: 1.5em;
+    font-size: 1.5em;
+    letter-spacing: 0.09em;
+}
+
+.navbar-footer-mobile {
+    display: flex;
+    justify-content: space-around;
+    margin: 1em;
+    width: 80%;
 }
 
 .lucide {
@@ -289,7 +357,7 @@ section h3 {
 /*
     SKILLS
 */
-.languages, .frameworks, .tools {
+.languages, .frameworks, .tools, .ai {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 2em;
@@ -309,10 +377,10 @@ section h3 {
     text-align: center;
 }
 
-.skillCard i {
-    font-size: 1.5em;
+.skillCard img {
+    width: 3em;
+    height: 3em;
     margin-bottom: 0.5em;
-    color: var(--accent2);
 }
 
 .skillCard span {
@@ -690,6 +758,10 @@ footer {
 }
 
 @media screen and (max-width: 1260px) and (min-width: 701px) {
+    .mobileNavbar-links {
+        display: none;
+    }
+    
     .content {
         flex-direction: row;
         height: 30em;
@@ -714,8 +786,20 @@ footer {
 
 @media screen and (max-width: 700px), 
 screen and (max-height: 500px) and (orientation: landscape) {
+    nav {
+        flex-direction: row-reverse;
+    }
+
+    nav > button {
+        display: block;
+    }
+    
     .navbar-links {
         display: none;
+    }
+
+    .navOverlay {
+        display: block;
     }
 
     .header-image img {
@@ -730,7 +814,7 @@ screen and (max-height: 500px) and (orientation: landscape) {
         flex-direction: column;
     }
 
-    .languages, .frameworks, .tools {
+    .languages, .frameworks, .tools, .ai {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
 

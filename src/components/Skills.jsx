@@ -1,44 +1,77 @@
 import SkillCard from "./SkillCard"
 
+import html from "../assets/svg_icons/html-5.svg";
+import css from "../assets/svg_icons/css.svg";
+import js from "../assets/svg_icons/javascript.svg";
+
+import python from "../assets/svg_icons/python.svg";
+import java from "../assets/svg_icons/java.svg";
+import php from "../assets/svg_icons/php.svg";
+
+import csharp from "../assets/svg_icons/c-sharp.svg";
+
+import react from "../assets/svg_icons/react.svg";
+import tailwind from "../assets/svg_icons/tailwindcss-icon.svg";
+
+import figma from "../assets/svg_icons/figma.svg";
+import github from "../assets/svg_icons/github-icon.svg";
+import git from "../assets/svg_icons/git-icon.svg";
+
+import intellij from "../assets/svg_icons/intellij-idea.svg";
+import jupyter from "../assets/svg_icons/jupyter.svg";
+import mariadb from "../assets/svg_icons/mariadb-icon.svg";
+
+import vscode from "../assets/svg_icons/visual-studio-code.svg";
+import vs from "../assets/svg_icons/visual-studio.svg";
+
+import claude from "../assets/svg_icons/claude-icon.svg";
+import openAi from "../assets/svg_icons/openai-icon.svg";
+
 const Skills = () => {
     return (
         <section id="skills">
             <h2>Skills</h2>
             <h3>Languages</h3>
             <div className="languages">
-                <SkillCard icon = "devicon-html5-plain" name = "HTML5" color = "#f16529"/>
-                <SkillCard icon = "devicon-css3-plain" name = "CSS3" color = "#32A9DC"/>
-                <SkillCard icon = "devicon-javascript-plain" name = "JS" color = "#F0DB4F"/>
+                <SkillCard icon = {html} name = "HTML5" />
+                <SkillCard icon = {css} name = "CSS3" />
+                <SkillCard icon = {js} name = "JS" />
 
-                <SkillCard icon = "devicon-python-plain" name = "Python" color = "#3873A3"/>
-                <SkillCard icon = "devicon-java-plain" name = "Java" color = "#e92d2e"/>
-                <SkillCard icon = "devicon-php-plain" name = "PHP" color = "#545894"/>
+                <SkillCard icon = {python} name = "Python" />
+                <SkillCard icon = {java} name = "Java" />
+                <SkillCard icon = {php} name = "PHP" />
                 
-                <SkillCard icon = "devicon-csharp-plain" name = "C#" color = "#68217a"/>
+                <SkillCard icon = {csharp} name = "C#" />
             </div>
           
             <h3>Frameworks</h3>
             <div className="frameworks">
-                <SkillCard icon = "devicon-react-original" name = "React" color = "#60dafb"/>
-                <SkillCard icon = "devicon-tailwindcss-original" name = "Tailwind" color = "#39bdf8"/>
+                <SkillCard icon = {react} name = "React" />
+                <SkillCard icon = {tailwind} name = "Tailwind" />
             </div>
 
             <h3>Tools</h3>
             <div className="tools">
-                <SkillCard icon = "devicon-figma-plain" name = "Figma" color = "#ff7262"/>
-                <SkillCard icon = "devicon-github-original" name = "Github" color = "#fff"/>
-                <SkillCard icon = "devicon-git-plain" name = "Git" color = "#f35028"/>
+                <SkillCard icon = {figma} name = "Figma"/>
+                <SkillCard icon = {github} name = "Github" />
+                <SkillCard icon = {git} name = "Git" />
 
-                <SkillCard icon = "devicon-intellij-plain" name = "IntelliJ" color = "#0a7cfa"/>
-                <SkillCard icon = "devicon-jupyter-plain" name = "Jupyter" color = "#f27726"/>
-                <SkillCard icon = "devicon-mariadb-plain" name = "MariaDB" color = "#003545"/>
+                <SkillCard icon = {intellij} name = "IntelliJ" />
+                <SkillCard icon = {jupyter} name = "Jupyter" />
+                <SkillCard icon = {mariadb} name = "MariaDB" />
 
-                <SkillCard icon = "devicon-sqldeveloper-plain" name = "SQL Developer" color = "#d1d1d1"/>
-                <SkillCard icon = "devicon-vscode-plain" name = "VSCode" color = "#2babf3"/>
-                <SkillCard icon = "devicon-vscodium-plain" name = "VSCodium" color = "#296cbf"/>
+                <SkillCard icon = {vscode} name = "VSCode" />
+                <SkillCard icon = {vs} name = "Visual Studio" />
+            </div>
+
+            <h3>Artificial Intelligence</h3>
+            <div className="ai">
+                <SkillCard icon = {claude} name = "Claude" />
+                <SkillCard icon = {openAi} name = "Open AI" />
             </div>
         </section>
     )
 }
+
 
 export default Skills

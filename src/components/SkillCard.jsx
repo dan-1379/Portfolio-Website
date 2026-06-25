@@ -11,7 +11,7 @@ import propTypes from "prop-types"
 const SkillCard = (props) => {
     return (
         <div className="skillCard">
-            <i className={props.icon} style={{color: props.color}}></i>
+            <img src={props.icon} alt={props.name} />
             <span>{props.name}</span>
         </div>
     )
@@ -20,7 +20,6 @@ const SkillCard = (props) => {
 SkillCard.propTypes = {
     icon: propTypes.string.isRequired,
     name: propTypes.string.isRequired,
-    color: propTypes.string.isRequired
 }
 
 export default SkillCard
