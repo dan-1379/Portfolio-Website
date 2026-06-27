@@ -18,7 +18,6 @@ const EducationCard = (props) => {
             <div className="educationCardIcon"><GraduationCap aria-hidden = "true"/></div>
             <h4>{props.name}</h4>
             <p>{props.qualification} · {props.fromDate} - {props.toDate}</p>
-            <span>{props.additional}</span>
         </div>
     )
 }

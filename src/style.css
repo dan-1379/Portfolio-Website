@@ -232,8 +232,8 @@ header p {
 }
 
 .header-image img {
-  width: 400px;
-  height: 400px;
+  width: min(400px, 50vw);
+  height: min(400px, 50vw);
   object-fit: cover;
   border-radius: 50%;
 }
@@ -273,6 +273,7 @@ section:nth-child(odd) {
 
 section p span {
     color: var(--text);
+    font-weight: bold;
 }
 
 section h3 {
@@ -288,22 +289,34 @@ section h3 {
     EDUCATION CARD
 */
 .education, .experience {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     gap: 2em;
 }
 
 .educationCard {
-    background: var(--card);
+    background: var(--bg);
     border: 1px solid var(--border);
     padding: 1.6rem;
     margin-bottom: 1rem;
     border-radius: 3px;
     flex: 1;
+    border-left: 3px solid var(--accent);
+    transition: 0.5s ease-in-out;
 }
 
 .educationCard:hover {
     background-color: var(--bg);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.educationCardUpperContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.educationCardIcon svg {
+    color: var(--accent);
 }
 
 .educationCard:hover .educationCardIcon svg {
@@ -312,14 +325,14 @@ section h3 {
 }
 
 .educationCard h4 {
-    font-size: 0.9rem;
-    font-weight: 700;
+    font-size: 1em;
+    font-weight: bolder;
     margin-bottom: 0.3rem;
     color: var(--text);
 }
 
 .educationCard p {
-    font-size: 0.72rem; 
+    font-size: 0.8em; 
     color: var(--muted); 
     margin-bottom: 0.5rem;
 }
@@ -373,7 +386,7 @@ section h3 {
 }
 
 .skillCard {
-    background-color: var(--surface);
+    background-color: var(--card);
     padding: 2em;
     display: flex;
     justify-content: space-between;
@@ -415,14 +428,17 @@ section h3 {
     display: grid;
     grid-template-rows: subgrid;
     grid-row: span 6;
-    background-color: var(--surface);
+    background-color: var(--bg);
     padding: 2em;
     border: 1px solid var(--border);
     margin-top: 2em;
+    transition: 0.5s ease-in-out;
+    border-radius: 0.5em;
 }
 
 .projectCard:hover {
-    background-color: var(--card);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    opacity: 1;
 }
 
 .projectCardIcon {
@@ -443,6 +459,7 @@ section h3 {
     padding: 0.6em 1em;
     border-radius: 0.5em;
     opacity: 0.5;
+    text-transform: uppercase;
 }
 
 .inProgressProject {
@@ -452,6 +469,7 @@ section h3 {
     padding: 1em;
     border-radius: 0.5em;
     opacity: 0.5;
+    text-transform: uppercase;
 }
 
 .projectCard h3 {
@@ -480,7 +498,7 @@ section h3 {
 
 .techStack {
     display: flex;
-    gap: 0.5em;
+    gap: 1em;
     font-size: 0.9em;
     grid-row: 4;
 }
@@ -768,6 +786,11 @@ footer {
 
 
 @media screen and (max-width: 1260px) and (min-width: 701px) {
+    .header-image img {
+        width: min(350px, 50vw);
+        height: min(350px, 50vw);
+    }
+    
     .mobileNavbar-links {
         display: none;
     }
@@ -821,7 +844,7 @@ screen and (max-height: 500px) and (orientation: landscape) {
     }
 
     .education, .experience {
-        flex-direction: column;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     }
 
     .languages, .frameworks, .tools, .ai {
@@ -835,7 +858,6 @@ screen and (max-height: 500px) and (orientation: landscape) {
     .projectCards {
         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     }
-
 
     .content{
         flex-direction: column;
@@ -866,8 +888,7 @@ screen and (max-height: 500px) and (orientation: landscape) {
     }
 }
 
-@media screen and (min-width: 700px) and (orientation: portrait),
-screen and (min-width: 900px) {
+@media screen and (min-width: 701px) {
     .mobileNavMenu {
         display: none;
     }

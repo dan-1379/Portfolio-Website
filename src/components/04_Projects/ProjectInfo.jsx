@@ -1,4 +1,4 @@
-import { TramFront, HandCoins, Hand, PiggyBank, ListChecks, Skull, Library, LibraryBig, MapPin } from 'lucide-react';
+import { TramFront, HandCoins, Hand, PiggyBank, ListChecks, Skull, Database, LibraryBig, MapPin } from 'lucide-react';
 
 // Interail Journey
 import interrailJourney from "../../assets/MyInterrailJourney/interrailJourney.jpeg";
@@ -80,7 +80,7 @@ export const ProjectInfo = [
             progress: "complete"
         },
         {
-            icon: <Library className="projectIcon" />,
+            icon: <Database className="projectIcon" />,
             name:"Library System (C#)",
             description:"Windows Forms library system using with an Oracle backend. Includes IronPDF integration for reports, and chart-based analytics.",
             tech:["C#", "OracleDB"],
