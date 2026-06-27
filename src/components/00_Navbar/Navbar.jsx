@@ -1,17 +1,27 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Menu, X, Sun, Moon, Handshake, Computer, MapPin } from 'lucide-react';
 
 const Navbar = () => {
   const[mobileNavOpen, setMobileNavOpen] = useState(false);
   const[lightModeOn, setLightModeOn] = useState(false);
 
+  useEffect(() => {
+    const colorMode = localStorage.getItem("light-mode");
+    const isLight = colorMode === "true";
+
+    setLightModeOn(isLight);
+    document.body.classList.toggle('light-mode', isLight);
+  })
+
   const toggleNavBar = () => {
     setMobileNavOpen(!mobileNavOpen);
   }
 
   const toggleLightMode = () => {
-    setLightModeOn(!lightModeOn);
-    document.body.classList.toggle('light-mode');
+    const mode = !lightModeOn;
+    setLightModeOn(mode);
+    document.body.classList.toggle('light-mode', mode);
+    localStorage.setItem("light-mode", mode);
   }
 
   return (
