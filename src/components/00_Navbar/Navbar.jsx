@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <>
       <div className="nav-wrapper">
-        <nav>
+        <nav id="pageTop">
           <button 
             onClick={toggleLightMode}
             aria-label={lightModeOn ? "Switch to dark mode" : "Switch to light mode"}

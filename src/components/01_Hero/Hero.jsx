@@ -1,4 +1,4 @@
-import headshot from '../assets/headshot.JPG'
+import ResponsiveHeadshot from "./ResponsiveHeadshot"
 
 const Hero = () => {
     return (
@@ -18,7 +18,7 @@ const Hero = () => {
             </div>
 
             <div className="header-image">
-                <img src={headshot} alt="Daniel Courtney headshot" />
+                <ResponsiveHeadshot />
             </div>
         </header>
     )

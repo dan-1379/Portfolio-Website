@@ -1,7 +1,7 @@
 import EducationCard from "./EducationCard"
 import ExperienceCard from "./ExperienceCard"
-import headshot from '../assets/headshot.JPG'
 import CertificationCard from "./CertificationCard"
+import ResponsiveHeadshot from "../01_Hero/ResponsiveHeadshot"
 
 const About = () => {
     return (
@@ -9,7 +9,7 @@ const About = () => {
             <h2>About Me</h2>
 
              <div className="about-headshot">
-                <img src={headshot} alt="Daniel Courtney headshot" />
+                <ResponsiveHeadshot />
             </div>
 
             <p>

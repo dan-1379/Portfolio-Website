@@ -1,10 +1,10 @@
-import Navbar from './components/Navbar.jsx'
-import Hero from './components/Hero.jsx'
-import About from './components/About.jsx'
-import Skills from './components/Skills.jsx'
-import Projects from './components/Projects.jsx'
-import Contact from './components/Contact.jsx'
-import Footer from './components/Footer.jsx'
+import Navbar from './components/00_Navbar/Navbar.jsx'
+import Hero from './components/01_Hero/Hero.jsx'
+import About from './components/02_About/About.jsx'
+import Skills from './components/03_Skills/Skills.jsx'
+import Projects from './components/04_Projects/Projects.jsx'
+import Contact from './components/05_Contact/Contact.jsx'
+import Footer from './components/06_Footer/Footer.jsx'
 import { ArrowUp } from 'lucide-react';
 
 
@@ -22,7 +22,7 @@ function App() {
       </main>
       <Footer />
       <a 
-        href="#" 
+        href="#pageTop" 
         className = "backToTop" 
         aria-label='Back to top'
         onClick={(e) => {

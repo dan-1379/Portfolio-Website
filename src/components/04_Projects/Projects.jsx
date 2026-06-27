@@ -40,7 +40,8 @@ const Projects = () => {
 
                             <div className="carousel"> 
                                 <img src={learnMore.images ? learnMore.images[currentImage].image : learnMore.image} 
-                                     alt={learnMore.images ? learnMore.images[currentImage].description : learnMore.name} />
+                                     alt={learnMore.images ? learnMore.images[currentImage].description : learnMore.name}
+                                     loading="lazy" />
 
                                 <div className="imageInfo">
                                     {learnMore.images.length > 1 ? <div className="imageCount">{currentImage + 1} / {learnMore.images.length}</div> : <div></div>}
