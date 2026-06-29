@@ -19,7 +19,7 @@ const ContactLink = (props) => {
 
             <a 
                 href={props.href} 
-                target="_blank"
+                target={props.external ? "_blank" : undefined}
                 rel={props.external ? "noopener noreferrer" : undefined}
                 download={props.download}
             >
@@ -30,7 +30,7 @@ const ContactLink = (props) => {
 }
 
 ContactLink.propTypes = {
-    icon: propTypes.node.isRequired,
+    icon: propTypes.elementType.isRequired,
     href: propTypes.string.isRequired,
     external: propTypes.bool,
     download: propTypes.string,
