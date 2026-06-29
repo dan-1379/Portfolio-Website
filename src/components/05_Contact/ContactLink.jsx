@@ -19,8 +19,8 @@ const ContactLink = (props) => {
 
             <a 
                 href={props.href} 
-                target={props.external ? "_blank" : undefined}
-                rel={external ? "noopener noreferrer" : undefined}
+                target="_blank"
+                rel={props.external ? "noopener noreferrer" : undefined}
                 download={props.download}
             >
                 {props.name}
