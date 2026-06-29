@@ -1,6 +1,10 @@
 import { CodeXml } from 'lucide-react';
 import CssToggle from '../07_Buttons/CssToggle';
 
+/**
+ * 
+ * @returns Footer Component
+ */
 const Footer = () => {
     return (
         <footer>

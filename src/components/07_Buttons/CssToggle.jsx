@@ -1,5 +1,9 @@
 import { ToggleLeft } from 'lucide-react';
 
+/**
+ * 
+ * @returns Button to toggle CSS on and off
+ */
 const CssToggle = () => {
     const toggle = () => {
         document.querySelectorAll('link[rel="stylesheet"], style').forEach((el) => {

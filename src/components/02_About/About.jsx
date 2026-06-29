@@ -4,6 +4,7 @@ import CertificationCard from "./CertificationCard"
 import ResponsiveHeadshot from "../01_Hero/ResponsiveHeadshot"
 
 import { Award, FileBadge, Users, Sparkles } from 'lucide-react';
+import { education, experience, certification } from "./AboutInfo";
 
 const About = () => {
     return (
@@ -15,7 +16,7 @@ const About = () => {
             </div>
 
             <p>
-                I am a second-year <span>BSc Computing with Software Development</span> student at Munster Technological University. 
+                I am a third-year <span>BSc Computing with Software Development</span> student at Munster Technological University. 
                 Through my coursework, I have gained experience writing and testing code while working on structured programming assignments, and approaching technical problems in a methodical manner. I have also supported others in learning programming concepts, which has involved explaining ideas clearly and working through problems.
                 
                 <br /> <br />
@@ -33,25 +34,23 @@ const About = () => {
 
             <h3>Education</h3>
             <div className="education">
-                <EducationCard name= "Munster Technological University" qualification = "BSc Computing with Software Development" fromDate = "2024" toDate = "2028" />
-                <EducationCard name= "Killorglin Community College" qualification = "Leaving Certificate" fromDate = "2016" toDate = "2022" />
+                {education.map((item, index) => (
+                    <EducationCard key={index} {...item}/>
+                ))}
             </div>
 
             <h3>Experience</h3>
             <div className="experience">
-                <ExperienceCard role = "Summer Intern" company = "Fexco" fromDate = "May 2025" toDate = "Sep 2025" />
-                <ExperienceCard role = "Customer Service Representitive" company = "Fexco" fromDate = "Jul 2022" toDate = "Sep 2024" />
+                {experience.map((item, index) => (
+                    <ExperienceCard key={index} {...item}/>
+                ))}
             </div>
 
             <h3>Certifications</h3>
             <div className="certifications">
-                <CertificationCard certification = "EDGE Gold Award" organisation = "Munster Technological University" issueDate = "Apr 2026" credential = "https://my.potential.ly/folio/badge/bC5aH5IhLUAPsNus" icon = {<Award aria-hidden = "true" />}/>
-                <CertificationCard certification = "Peer Mentoring" organisation = "Munster Technological University" issueDate = "Apr 2026" credential = "https://www.linkedin.com/in/daniel-courtney-7b9255331/details/certifications/" icon = {<Users aria-hidden = "true" />}/>
-                <CertificationCard certification = "MTU Joint Mentorship Programme" organisation = "Munster Technological University" issueDate = "Apr 2026" credential = "https://www.linkedin.com/in/daniel-courtney-7b9255331/details/certifications/" icon = {<FileBadge aria-hidden = "true" />}/>
-
-                <CertificationCard certification = "Introduction to generative AI" organisation = "Microsoft" issueDate = "Apr 2026" credential = "https://learn.microsoft.com/en-gb/users/danielcourtney-2122/achievements/82uh5cpw?ref=https%3A%2F%2Fwww.linkedin.com%2F" icon = {<Sparkles aria-hidden = "true" />}/>
-                <CertificationCard certification = "EDGE Silver Award" organisation = "Munster Technological University" issueDate = "Sep 2025" credential = "https://my.potential.ly/folio/badge/ffUsqr5rAr4y4eth" icon = {<Award aria-hidden = "true" />}/>
-                <CertificationCard certification = "EDGE Bronze Award" organisation = "Munster Technological University" issueDate = "Feb 2025" credential = "https://my.potential.ly/folio/badge/ihBHwVy4ph3K4Cwj" icon = {<Award aria-hidden = "true" />}/>
+                {certification.slice().reverse().map((item, index) => (
+                    <CertificationCard key={index} {...item}/>
+                ))}
             </div>
         </section>
     )

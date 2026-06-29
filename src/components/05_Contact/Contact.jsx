@@ -1,5 +1,11 @@
 import { Mail, Handshake, Computer, MapPin, FileUser } from 'lucide-react';
+import { ContactInfo } from './ContactInfo';
+import ContactLink from './ContactLink';
 
+/**
+ * 
+ * @returns Contact component
+ */
 const Contact = () => {
     return (
         <section id = "contact">
@@ -10,25 +16,9 @@ const Contact = () => {
                     particularly within Ireland. If you're hiring or just want to connect, I'd love to hear from you.
                 </p>
                 <div className="contactLinks">
-                    <div className="contactLink">
-                        <Mail className='contactIcon' aria-hidden = "true"/>
-                        <a href="mailto:daniel1courtney3@gmail.com">Email</a>
-                    </div>
-
-                    <div className="contactLink">
-                        <Handshake className='contactIcon' aria-hidden = "true"/>
-                        <a href="https://www.linkedin.com/in/daniel-courtney-7b9255331/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    </div>
-
-                    <div className="contactLink">
-                        <Computer className='contactIcon' aria-hidden = "true"/>
-                        <a href="https://github.com/dan-1379" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    </div>
-
-                    <div className="contactLink">
-                        <FileUser className='contactIcon' aria-hidden = "true"/>
-                        <a href="/DanielCourtneyCV1.pdf" download="DanielCourtneyCV">Curriculum Vitae</a>
-                    </div>
+                    {ContactInfo.map((info, index) => (
+                        <ContactLink key={index} {...info} />
+                    ))}
 
                     <div className="contactLink">
                         <MapPin className='contactIcon' aria-hidden = "true"/>

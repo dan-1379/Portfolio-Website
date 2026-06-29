@@ -6,6 +6,7 @@
     --text: #0a0a0f;
     --muted: #55556b;
     --card: #dddde8;
+    --boxShadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 body.light-mode {
@@ -16,6 +17,7 @@ body.light-mode {
     --text: #e8e8f0;
     --muted: #6b6b80;
     --card: #13131c;
+    --boxShadow: rgba(0, 0, 0, 0.6) 0px 5px 15px, rgba(255, 255, 255, 0.06) 0px 0px 0px 1px;
 }
 
 html {
@@ -37,6 +39,7 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    align-content: center;
     padding: 0.5em 1em;
     border-bottom: 2px solid var(--border);
 }
@@ -309,7 +312,7 @@ section h3 {
 
 .educationCard:hover {
     background-color: var(--bg);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: var(--boxShadow);
 }
 
 .educationCardUpperContent {
@@ -426,6 +429,10 @@ section h3 {
     grid-template-rows: auto auto auto auto auto auto;
 }
 
+.projectCards:has(.projectCard:hover) .projectCard:not(:hover) {
+    filter: blur(1.5px);
+}
+
 .projectCard {
     display: grid;
     grid-template-rows: subgrid;
@@ -436,6 +443,7 @@ section h3 {
     margin-top: 2em;
     transition: 0.5s ease-in-out;
     border-radius: 0.5em;
+    will-change: filter;
 }
 
 .projectCard:hover {
@@ -639,10 +647,6 @@ section h3 {
     position: relative;
 }
 
-.imageContainer img:hover ~ .imageInfo {
-    display: none;
-}
-
 .contentText {
     padding: 2em;
 }
@@ -712,6 +716,24 @@ section h3 {
 
 .content .carouselButton:hover {
     opacity: 1;
+}
+
+.countriesVisited {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.5em;
+}
+
+.countriesVisited p {
+    display: flex;
+    gap: 0.5em;
+}
+
+.countriesVisited p svg {
+    width: 0.7em;
+    height: 0.7em;
+    align-self: center;
 }
 
 /*
@@ -838,6 +860,15 @@ footer {
     .contentText {
         flex: 1;
         overflow-y: auto;
+    }
+
+    .countriesVisited {
+        gap: 1em;
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    }
+
+    .countriesVisited p svg {
+        display: none;
     }
 }
 

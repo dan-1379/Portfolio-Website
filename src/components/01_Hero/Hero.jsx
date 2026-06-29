@@ -6,7 +6,8 @@ const Hero = () => {
             <div className="header-content">
                 <h1>Software <br /> <span>Development</span> <br /> Student</h1>
 
-                <p>Second-year Computing student at MTU Kerry, with experience in building 
+                <p>
+                    Third-year Computing student at MTU Kerry, with experience in building 
                     applications with a focus on clean architecture. 
                     Keen interest in software architecture and fintech.
                 </p>
