@@ -1,4 +1,4 @@
-import { Mail, Handshake, Computer, MapPin, FileUser } from 'lucide-react';
+import { Mail, Handshake, Computer, FileUser } from 'lucide-react';
 import { ContactInfo } from './ContactInfo';
 import ContactLink from './ContactLink';
 
@@ -15,15 +15,11 @@ const Contact = () => {
                     I'm actively looking for internship and placement opportunities in software development and fintech, 
                     particularly within Ireland. If you're hiring or just want to connect, I'd love to hear from you.
                 </p>
+
                 <div className="contactLinks">
                     {ContactInfo.map((info, index) => (
                         <ContactLink key={index} {...info} />
                     ))}
-
-                    <div className="contactLink">
-                        <MapPin className='contactIcon' aria-hidden = "true"/>
-                        <p>Kerry, Ireland</p>
-                    </div>
                 </div>
             </div>
         </section>

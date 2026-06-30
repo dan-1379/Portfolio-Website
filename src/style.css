@@ -180,11 +180,12 @@ nav > button {
 header {
     margin: 1em;
     display: flex;
+    gap: 2em;
     justify-content: space-between;
 }
 
 header h1 {
-    font-size: clamp(2rem, 8vw, 4rem);
+    font-size: clamp(2em, 8vw, 4rem);
 }
 
 header h1 span {
@@ -233,8 +234,8 @@ header p {
 }
 
 .header-image img {
-  width: min(400px, 50vw);
-  height: min(400px, 50vw);
+  width: min(400px, 40vw);
+  height: min(400px, 40vw);
   object-fit: cover;
   border-radius: 50%;
 }
@@ -870,6 +871,10 @@ footer {
     .countriesVisited p svg {
         display: none;
     }
+
+    .projectCards:has(.projectCard:hover) .projectCard:not(:hover) {
+        filter: none;
+    }
 }
 
 @media screen and (max-width: 700px), 
@@ -912,6 +917,10 @@ screen and (max-height: 500px) and (orientation: landscape) {
 
     .projectCards {
         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+
+    .projectCards:has(.projectCard:hover) .projectCard:not(:hover) {
+        filter: none;
     }
 
     .content{
