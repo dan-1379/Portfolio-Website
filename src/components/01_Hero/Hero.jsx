@@ -4,7 +4,8 @@ const Hero = () => {
     return (
         <header>
             <div className="header-content">
-                <h1>Software <br /> <span>Development</span> <br /> Student</h1>
+                <p className="header-tagline">daniel@mtu:~$</p>
+                <h1>Software <br /> <span>Development</span> <br /> Student <span className="header-blinker">_</span></h1>
 
                 <p>
                     Third-year Computing student at MTU Kerry, with experience in building 

@@ -71,11 +71,27 @@ nav > button {
     letter-spacing: 0.1em;
     color: var(--muted);
     text-decoration: none;
+    position: relative;
 }
 
-.navbar-links a:hover, .navbar-links-mobile a:hover {
-    border-bottom: 1px solid var(--accent);
-    color: var(--text);
+.navbar-links a:hover::before, .navbar-links-mobile a:hover::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: 10em;
+    background-color: var(--accent);
+    width: 100%;
+    height: 0.1em;
+    animation: openNavMenu 0.5s ease-in-out;
+}
+
+.lightModeToggle svg {
+    transition: 0.5s ease-in;
+}
+
+.lightModeToggle svg:hover {
+    color: var(--accent);
 }
 
 .mobileNavbar-links {
@@ -147,7 +163,6 @@ nav > button {
     width: fit-content;
 }
 
-
 .mobileNavMenu button, .navbar-links button {
   background: none;
   border: none;
@@ -184,16 +199,43 @@ header {
     justify-content: space-between;
 }
 
+.header-tagline {
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    font-size: 0.9em;
+}
+
 header h1 {
-    font-size: clamp(2em, 8vw, 4rem);
+    font-size: clamp(3em, 8vw, 4rem);
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 header h1 span {
     color: var(--accent);
 }
 
+.header-blinker {
+    animation: blinking 2s step-end infinite;
+}
+
+@keyframes blinking {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 header p {
     color: var(--muted);
+    max-width: 100ch;
 }
 
 .hero-buttons {
@@ -230,14 +272,17 @@ header p {
 }
 
 .header-image {
+    display: flex;
+    justify-content: right;
     align-self: center;
+    width: 40%;
 }
 
 .header-image img {
-  width: min(400px, 40vw);
+  width: min(600px, 40vw);
   height: min(400px, 40vw);
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 1em;
 }
 
 /*
@@ -830,12 +875,10 @@ footer {
     scale: 90%;
 }
 
-
-
 @media screen and (max-width: 1260px) and (min-width: 701px) {
     .header-image img {
-        width: min(350px, 50vw);
-        height: min(350px, 50vw);
+        width: min(300px, 50vw);
+        height: min(300px, 50vw);
     }
     
     .mobileNavbar-links {
