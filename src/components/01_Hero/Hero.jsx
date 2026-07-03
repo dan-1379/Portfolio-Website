@@ -1,11 +1,11 @@
 import ResponsiveHeadshot from "./ResponsiveHeadshot"
+import HeroTerminal from "./HeroTerminal"
 
 const Hero = () => {
     return (
         <header>
             <div className="header-content">
-                <p className="header-tagline">daniel@mtu:~$</p>
-                <h1>Software <br /> <span>Development</span> <br /> Student <span className="header-blinker">_</span></h1>
+                <h1>Software <br /> <span>Development</span> <br /> Student</h1>
 
                 <p>
                     Third-year Computing student at MTU Kerry, with experience in building 
@@ -19,8 +19,8 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className="header-image">
-                <ResponsiveHeadshot />
+            <div className="header-terminal">
+                <HeroTerminal />
             </div>
         </header>
     )

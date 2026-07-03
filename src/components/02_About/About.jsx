@@ -11,26 +11,30 @@ const About = () => {
         <section id="about">
             <h2>About Me</h2>
 
-             <div className="about-headshot">
+            <div className="about-headshot">
                 <ResponsiveHeadshot />
             </div>
 
-            <p>
-                I am a third-year <span>BSc Computing with Software Development</span> student at Munster Technological University. 
-                Through my coursework, I have gained experience writing and testing code while working on structured programming assignments, and approaching technical problems in a methodical manner. I have also supported others in learning programming concepts, which has involved explaining ideas clearly and working through problems.
+            <div className="about-content">
+                <ResponsiveHeadshot />
                 
-                <br /> <br />
+                <p>
+                    I am a third-year <span>BSc Computing with Software Development</span> student at Munster Technological University. 
+                    Through my coursework, I have gained experience writing and testing code while working on structured programming assignments, and approaching technical problems in a methodical manner. I have also supported others in learning programming concepts, which has involved explaining ideas clearly and working through problems.
+                    
+                    <br /> <br />
 
-                Alongside my studies, I have experience in a customer service environment where I worked within established processes, handled responsibilities independently, and contributed to team outcomes. 
-                My interests lie in the <span>backend architecture</span> of applications. I enjoy designing clean and 
-                maintainable systems, whether that is utilising certain design patterns or creating a database
-                schema that scales.
-                I am particularly interested in gaining practical industry experience and understanding how software is designed, built, and maintained in real-world teams.
+                    Alongside my studies, I have experience in a customer service environment where I worked within established processes, handled responsibilities independently, and contributed to team outcomes. 
+                    My interests lie in the <span>backend architecture</span> of applications. I enjoy designing clean and 
+                    maintainable systems, whether that is utilising certain design patterns or creating a database
+                    schema that scales.
+                    I am particularly interested in gaining practical industry experience and understanding how software is designed, built, and maintained in real-world teams.
 
-                <br /> <br />
+                    <br /> <br />
 
-                I am seeking software development <span>internship opportunities in the Irish tech and fintech sector</span>.
-            </p>
+                    I am seeking software development <span>internship opportunities in the Irish tech and fintech sector</span>.
+                </p>
+            </div>
 
             <h3>Education</h3>
             <div className="education">
