@@ -26,6 +26,14 @@ const MobileNav = ({ isOpen, onClose, lightModeOn, onToggle }) => {
                 
                 </div>
 
+                <div className="terminalCommand">
+                   <p>
+                        <span className="terminal-user">{">"} daniel@mtu:~$ </span> 
+                        <span className="terminal-command">navigate --help</span>
+                        <span className="header-blinker">_</span>
+                    </p>    
+                </div>
+
                 <ul className="navbar-links-mobile">
                     {NavLinks.map((link, index) => (
                         <li key={link.href}>

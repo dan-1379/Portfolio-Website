@@ -96,7 +96,7 @@ nav > button {
 
 .mobileNavbar-links {
     align-items: center;
-    background-color: var(--card);
+    background-color: var(--bg);
     width: 100%;
     height: 100%;
     position: fixed;
@@ -146,7 +146,18 @@ nav > button {
 .upperMenu h3 {
     font-size: 1em;
     color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
+
+.terminalCommand {
+    align-content: center;
+    text-align: center;
+    height: 5em;
+    width: 100%;
+    padding: 1em;
+}
+
 
 .navbar-links-mobile {
     flex: 1;
@@ -161,6 +172,14 @@ nav > button {
     margin: 1em;
     padding: 0.2em;
     width: fit-content;
+}
+
+.navbar-links-mobile li a {
+    color: var(--text);
+}
+
+.navbar-link-index {
+    color: var(--accent);
 }
 
 .mobileNavMenu button, .navbar-links button {
@@ -182,7 +201,10 @@ nav > button {
     display: flex;
     justify-content: space-around;
     margin: 1em;
-    width: 80%;
+    width: 100%;
+    border-top: 1px solid var(--border);
+    padding-top: 1em;
+    align-items: center;
 }
 
 .lucide {
@@ -236,6 +258,7 @@ header h1 span {
 header p {
     color: var(--muted);
     max-width: 100ch;
+    font-size: clamp(0.90rem, 1.1vw, 1rem);
 }
 
 .hero-buttons {
@@ -275,7 +298,12 @@ header p {
     display: flex;
     justify-content: right;
     align-self: center;
-    gap: 3em;
+    align-items: stretch;
+    gap: 1.5em;
+}
+
+.about-content p {
+    font-size: clamp(0.80rem, 1.1vw, 1rem);
 }
 
 .about-content img {
@@ -332,6 +360,7 @@ body.light-mode .header-terminal {
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
+    color: black;
 }
 
 .upper-terminal-buttons:hover svg {
@@ -448,7 +477,13 @@ section h3 {
 /*
     EDUCATION CARD
 */
-.education, .experience {
+.education {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    gap: 2em;
+}
+
+.experience {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     gap: 2em;
@@ -1001,21 +1036,29 @@ footer {
     .mobileNavbar-links {
         display: none;
     }
+
+    .education {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 2em;
+    }
     
     .content {
-        flex-direction: row;
+        flex-direction: column;
         height: 30em;
     }
 
     .imageContainer {
         flex: 0 0 50%;
         height: 30em;
+        border-radius: 2em;
     }
 
     .imageContainer img {
         width: 100%;
         height: 30em;
         object-fit: cover;
+        border-radius: 2em 2em 0 0;
     }
 
     .contentText {
@@ -1111,7 +1154,6 @@ screen and (max-height: 500px) and (orientation: landscape) {
     .imageContainer img {
         height: 40vh;
         width: 100%;
-        border-radius: 2em 2em 0 0em;
         object-fit: cover;
     }
 

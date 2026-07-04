@@ -35,7 +35,7 @@ const HeroTerminal = () => {
                     <span className="terminal-punctuation">&#123;</span> <br />
                     
                     {info.map((line, index) => (
-                        <TerminalLine key={line.index} name={line.key} value={line.value} isLast={index === info.length - 1} />
+                        <TerminalLine key={index} name={line.key} value={line.value} isLast={index === info.length - 1} />
                     ))}
 
                     <span className="terminal-punctuation">&#125;</span>

@@ -6,6 +6,7 @@ export const education = [
 ];
 
 export const experience = [
+    {role: "IT Summer Intern", company: "Fexco", fromDate: "July 2026", toDate: "August 2026"},
     {role: "Summer Intern", company: "Fexco", fromDate: "May 2025", toDate: "Sep 2025"},
     {role: "Customer Service Representitive", company: "Fexco", fromDate: "Jul 2022", toDate: "Sep 2024"},
 ];

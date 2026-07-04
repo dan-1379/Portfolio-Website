@@ -71,6 +71,7 @@ const ProjectModal = ({ project, onClose }) => {
                     <span className="dates">{project.dateFrom} - {project.dateTo}</span>
                     <hr />
                     <p>{project.overview}</p>
+
                     {project.countries && 
                         <div className="countriesVisited">
                             {project.countries.map((country, index) => (

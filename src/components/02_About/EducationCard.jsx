@@ -16,8 +16,8 @@ const EducationCard = (props) => {
     return (
         <div className="educationCard">
             <div className="educationCardIcon"><GraduationCap aria-hidden = "true"/></div>
-            <h4>{props.name}</h4>
-            <p>{props.qualification} · {props.fromDate} - {props.toDate}</p>
+            <h4>{props.qualification}</h4>
+            <p>{props.name} · {props.fromDate} - {props.toDate}</p>
         </div>
     )
 }

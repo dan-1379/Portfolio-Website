@@ -12,7 +12,7 @@ const Contact = () => {
             <div className="contactOverview">
                 <h2>Get in Touch</h2>
                 <p>
-                    I'm actively looking for internship and placement opportunities in software development and fintech, 
+                    I'm actively looking for placement opportunities in software development and fintech, 
                     particularly within Ireland. If you're hiring or just want to connect, I'd love to hear from you.
                 </p>
 
