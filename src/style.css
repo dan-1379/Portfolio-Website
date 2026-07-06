@@ -987,7 +987,6 @@ section h3 {
     display: flex;
     gap: 1em;
     align-items: center;
-    height: stretch;
 }
 
 .contactLink a {
