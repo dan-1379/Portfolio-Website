@@ -5,8 +5,20 @@ import ResponsiveHeadshot from "../01_Hero/ResponsiveHeadshot"
 
 import { Award, FileBadge, Users, Sparkles } from 'lucide-react';
 import { education, experience, certification } from "./AboutInfo";
+import { useState } from "react";
 
 const About = () => {
+    const uniqueOrganisations = [...new Set(certification.map(item => item.organisation))];
+    const [organisation, setOrganisation] = useState("");
+
+    const filteredOrganisations = organisation 
+        ? certification.filter(item => item.organisation === organisation)
+        : certification;
+
+    const filterOrganisations = (org) => {
+        setOrganisation(org);
+    }
+
     return (
         <section id="about">
             <h2>About Me</h2>
@@ -51,8 +63,17 @@ const About = () => {
             </div>
 
             <h3>Certifications</h3>
+
+            <div className="filterButtons">
+                <button onClick={() => filterOrganisations("")} className={organisation === "" ? "activeFilter" : "inactiveFilter"}>All</button>
+
+                {uniqueOrganisations.sort().map((org, index) => (
+                    <button key={index} onClick={() => filterOrganisations(org)} className={organisation === org ? "activeFilter" : "inactiveFilter"}>{org}</button>
+                ))}
+            </div>
+
             <div className="certifications">
-                {certification.slice().reverse().map((item, index) => (
+                {filteredOrganisations.slice().reverse().map((item, index) => (
                     <CertificationCard key={index} {...item}/>
                 ))}
             </div>

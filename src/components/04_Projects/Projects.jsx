@@ -9,16 +9,35 @@ import ProjectModal from "./ProjectModal";
  */
 const Projects = () => {
     const[learnMore, setLearnMore] = useState(null);
+    const uniqueTechStack = [...new Set(ProjectInfo.map(info => info.tech[0]))];
+    const [techSelected, setTechSelected] = useState("");
 
     const openLearnMore = (project) => setLearnMore(project);
     const closeLearnMore = () => setLearnMore(null);
+
+    const filteredTech = techSelected
+        ? ProjectInfo.filter(item => item.tech[0] === techSelected)
+        : ProjectInfo;
+
+    const filterTech = (tech) => {
+        setTechSelected(tech);
+    }
 
     return (
         <section id="projects">
             <h2>Projects</h2>
 
+            <div className="projectFilterButtons">
+                <button onClick={() => filterTech("")} className={techSelected === "" ? "activeFilter" : "inactiveFilter"}>All</button>
+
+                {uniqueTechStack.sort().map((tech, index) => (
+                    <button key={index} onClick={() => filterTech(tech)} className={techSelected === tech ? "activeFilter" : "inactiveFilter"}>{tech}</button>
+                ))}
+            </div>
+
+
             <div className="projectCards">
-                {ProjectInfo.map((project, index) => (
+                {filteredTech.map((project, index) => (
                     <ProjectCard key = {index} {...project} openLearnMore = {openLearnMore} />
                 ))}
             </div>

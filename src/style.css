@@ -28,6 +28,7 @@ body {
     background: var(--bg);
     color: var(--text);
     font-family: 'IBM Plex Mono', monospace;
+    text-wrap: balance;
 }
 
 /*
@@ -308,6 +309,7 @@ header p {
   height: min(400px, 50vw);
   object-fit: cover;
   border-radius: 1em;
+  box-shadow: var(--boxShadow);
 }
 
 .header-terminal {
@@ -449,12 +451,9 @@ section:nth-child(odd) {
   border-radius: 5%;
 }
 
-.about-headshot img:hover {
-    filter: grayscale(100%);
-}
-
 .about-headshot img {
     display: none;
+    box-shadow: var(--boxShadow);
 }
 
 section p span {
@@ -545,6 +544,38 @@ section h3 {
     gap: 2em;
 }
 
+.filterButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin: 2em 0em 2em 0em;
+}
+
+#about button, #projects .projectFilterButtons button {
+    border: 1px solid var(--border);
+    padding: 0.8em 1em;
+    border-radius: 0.5em;
+    transition: 0.5s ease-in-out;
+}
+
+#about button:hover, #projects .projectFilterButtons button {
+    scale: 1.03;
+}
+
+#about button:active, #projects .projectFilterButtons button {
+    scale: 0.95;
+}
+
+.activeFilter {
+    background-color: var(--accent);
+    color: var(--bg);
+    transition: 2s ease-in-out;
+}
+
+.inactiveFilter {
+    background-color: transparent;
+}
+
 .educationCard a {
     text-decoration: none;
     color: var(--text);
@@ -601,12 +632,18 @@ section h3 {
 }
 
 .skillCard:hover {
-    scale: 1.05;
+    scale: 90%;
 }
 
 /*
     PROJECTS
 */
+
+.projectFilterButtons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 0.5em;
+}
 
 .projectCards {
     display: grid;
@@ -926,10 +963,23 @@ section h3 {
 /*
     CONTACT
 */
+#contact {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.contactOverview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
 .contactLinks {
     display: flex;
     flex-direction: column;
-    gap: 1em; 
+    gap: 1.5em; 
     color: var(--muted);
 }
 
@@ -937,6 +987,7 @@ section h3 {
     display: flex;
     gap: 1em;
     align-items: center;
+    height: stretch;
 }
 
 .contactLink a {
@@ -957,6 +1008,23 @@ section h3 {
 
 .contactLink a:hover .contactIcon {
     color: red;
+}
+
+.contactImage {
+    width: 40vw;
+}
+
+.contactImage img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5em;
+    object-fit: cover;
+    box-shadow: var(--boxShadow);
+    transition: 0.5s ease-in;
+}
+
+.contactImage img:hover {
+    scale: 1.02;
 }
 
 /*
@@ -1075,6 +1143,14 @@ footer {
     .projectCards:has(.projectCard:hover) .projectCard:not(:hover) {
         filter: none;
     }
+
+    #contact {
+        flex-direction: column;
+    }
+
+    .contactImage {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 700px), 
@@ -1123,6 +1199,10 @@ screen and (max-height: 500px) and (orientation: landscape) {
         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     }
 
+    .filterButtons {
+        flex-direction: column;
+    }
+
     .projectCards {
         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     }
@@ -1156,6 +1236,14 @@ screen and (max-height: 500px) and (orientation: landscape) {
 
     .imageInfo {
         flex-direction: column;
+    }
+
+    #contact {
+        flex-direction: column;
+    }
+
+    .contactImage {
+        width: 100%;
     }
 }
 
