@@ -6,12 +6,14 @@ import Projects from './components/04_Projects/Projects.jsx'
 import Contact from './components/05_Contact/Contact.jsx'
 import Footer from './components/06_Footer/Footer.jsx'
 import { ArrowUp } from 'lucide-react';
+import ScrollProgressBar from './components/07_Buttons/ScrollProgressBar.jsx'
 
 
 function App() {
 
   return (
     <>
+      <ScrollProgressBar />
       <Navbar />
       <Hero />
       <main>
