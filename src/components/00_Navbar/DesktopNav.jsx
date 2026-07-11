@@ -1,4 +1,4 @@
-import { NavLinks } from "./NavLinks";
+import NavLinks from "./NavLinks.json";
 import LightModeToggle from "./LightModeToggle";
 
 const DesktopNav = ({ lightModeOn, onToggle }) => {

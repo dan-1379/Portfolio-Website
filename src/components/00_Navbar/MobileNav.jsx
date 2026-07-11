@@ -1,5 +1,5 @@
 import { X } from 'lucide-react';
-import { NavLinks } from "./NavLinks";
+import NavLinks from "./NavLinks.json";
 import LightModeToggle from "./LightModeToggle";
 import { ContactInfo } from "../05_Contact/ContactInfo";
 import ContactLink from "../05_Contact/ContactLink";
@@ -49,8 +49,8 @@ const MobileNav = ({ isOpen, onClose, lightModeOn, onToggle }) => {
                 </ul>
 
                 <div className="navbar-footer-mobile">
-                    {ContactInfo.slice(1, 3).map((info) => (
-                        <ContactLink {...info} />
+                    {ContactInfo.slice(1, 3).map((info, index) => (
+                        <ContactLink key={index} {...info} />
                     ))}
                 </div>
             </div>

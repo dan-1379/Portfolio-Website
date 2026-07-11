@@ -1,4 +1,3 @@
-import { Mail, Handshake, Computer, FileUser } from 'lucide-react';
 import { ContactInfo } from './ContactInfo';
 import ContactLink from './ContactLink';
 import location from "../../assets/Location/location.png";

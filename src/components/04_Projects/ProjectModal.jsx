@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronRight, ChevronLeft, X } from "lucide-react";
+import { projectImages } from "./ProjectImages";
 
 /**
  * Displays a project's full details in a modal overlay, with an
@@ -31,12 +32,12 @@ const ProjectModal = ({ project, onClose }) => {
                     </button>
 
                     <div className="carousel"> 
-                        <img src={project.images ? project.images[currentImage].image : project.image} 
+                        <img src={project.images ? projectImages[project.images[currentImage].image] : project.image} 
                                 alt={project.images ? project.images[currentImage].description : project.name}
                                 loading="lazy" />
 
                         <div className="imageInfo">
-                            {project.images.length > 1 ? 
+                            {project.images && project.images.length > 1 ? 
                                 <div className="imageCount">{currentImage + 1} / {project.images.length}</div> 
                                 : 
                                 <div></div>
@@ -75,7 +76,7 @@ const ProjectModal = ({ project, onClose }) => {
                     {project.countries && 
                         <div className="countriesVisited">
                             {project.countries.map((country, index) => (
-                                <p>{project.locationIcon}{country}</p>
+                                <p key={index}>{country}</p>
                             ))}
                         </div>
                     }

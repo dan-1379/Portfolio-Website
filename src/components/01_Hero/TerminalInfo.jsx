@@ -1,9 +1,0 @@
-export const info = [
-    {key: "name", value: "Daniel Courtney"},
-    {key: "title", value: "Software Developer"},
-    {key: "focus", value: "Fintech/Software Architecture"},
-    {key: "education", value: "BSc Computing, MTU Kerry"},
-    {key: "status", value: "IT Operations & Service Delivery @ Fexco"},
-    {key: "exploring", value: "Building web applications with React JS"},
-    {key: "fortune", value: "Fortune favors the developer who reads the error message"},
-]

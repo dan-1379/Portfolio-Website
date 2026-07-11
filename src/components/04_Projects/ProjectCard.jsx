@@ -1,5 +1,15 @@
-import { ChevronRight, ExternalLink } from "lucide-react"
-import propTypes from "prop-types"
+import { ChevronRight, ExternalLink, TramFront, HandCoins, PiggyBank, ListChecks, Skull, Database, LibraryBig } from 'lucide-react';
+import propTypes from "prop-types";
+
+const projectIcon = {
+    libraryBig: LibraryBig,
+    database: Database,
+    skull: Skull,
+    listChecks: ListChecks, 
+    piggyBank: PiggyBank,
+    handCoins: HandCoins,
+    tramFront: TramFront,
+}
 
 /**
  * Displays a project with details in card format
@@ -16,11 +26,13 @@ import propTypes from "prop-types"
  * @returns Project Card
  */
 const ProjectCard = (props) => {
+    const ProjectIcon = projectIcon[props.icon];
+
     return (
         <div className="projectCard">
 
             <div className="projectCardIcon">
-                {props.icon}
+                <ProjectIcon className="projectIcon" />
                 {props.progress === "complete" ? 
                     <div className="completedProject">Completed</div> : 
                     <div className="inProgressProject">In Progress</div>}

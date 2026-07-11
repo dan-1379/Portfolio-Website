@@ -1,5 +1,5 @@
 import { X, Minus, Maximize2 } from 'lucide-react';
-import { info } from "./TerminalInfo";
+import info from "./TerminalInfo.json";
 import TerminalLine from './TerminalLine';
 
 const HeroTerminal = () => {

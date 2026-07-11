@@ -1,4 +1,5 @@
 import propTypes from "prop-types"
+import { iconMap } from "./IconInfo";
 
 /**
  * Displays a skill in card format
@@ -11,7 +12,7 @@ import propTypes from "prop-types"
 const SkillCard = (props) => {
     return (
         <div className="skillCard">
-            <img src={props.icon} alt={props.name} />
+            <img src={iconMap[props.icon]} alt={props.name} />
             <span>{props.name}</span>
         </div>
     )

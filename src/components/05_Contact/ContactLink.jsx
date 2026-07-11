@@ -1,4 +1,12 @@
 import propTypes from "prop-types";
+import { Mail, Handshake, Computer, FileUser } from 'lucide-react';
+
+const links = {
+    mail: Mail,
+    handshake: Handshake,
+    computer: Computer,
+    fileUser: FileUser
+}
 
 /**
  * Displays a contact link
@@ -11,7 +19,7 @@ import propTypes from "prop-types";
  * @returns Contact link component
  */
 const ContactLink = (props) => {
-    const Icon = props.icon;
+    const Icon = links[props.icon];
 
     return (
         <div className="contactLink">
@@ -30,7 +38,7 @@ const ContactLink = (props) => {
 }
 
 ContactLink.propTypes = {
-    icon: propTypes.elementType.isRequired,
+    icon: propTypes.string.isRequired,
     href: propTypes.string.isRequired,
     external: propTypes.bool,
     download: propTypes.string,

@@ -25,32 +25,12 @@ import vs from "../../assets/svg_icons/visual-studio.svg";
 import claude from "../../assets/svg_icons/claude-icon.svg";
 import openAi from "../../assets/svg_icons/openai-icon.svg";
 
-export const languages = [
-    {icon: html, name: "HTML5"},
-    {icon: css, name: "CSS3"},
-    {icon: js, name: "JS"},
-    {icon: python, name: "Python"},
-    {icon: java, name: "Java"},
-    {icon: php, name: "PHP"},
-    {icon: csharp, name: "C#"},
-];
-
-export const frameworks = [
-    {icon: react, name: "React"},
-    {icon: tailwind, name: "Tailwind"},
-];
-export const tools = [
-    {icon: figma, name: "Figma"},
-    {icon: github, name: "Github"},
-    {icon: git, name: "Git"},
-    {icon: intellij, name: "IntelliJ"},
-    {icon: jupyter, name: "Jupyter"},
-    {icon: mariadb, name: "MariaDB"},
-    {icon: vscode, name: "VSCode"},
-    {icon: vs, name: "Visual Studio"},
-];
-
-export const ai = [
-    {icon: claude, name: "Claude"},
-    {icon: openAi, name: "Open AI"},
-]
+export const iconMap = {
+    html, css, js, 
+    python, java, php,
+    csharp, react, tailwind,
+    figma, github, git,
+    intellij, jupyter, mariadb,
+    vscode, vs,
+    claude, openAi
+};

@@ -1,0 +1,29 @@
+{
+    "languages": [
+        {"icon": "html", "name": "HTML5"},
+        {"icon": "css", "name": "CSS3"},
+        {"icon": "js", "name": "JS"},
+        {"icon": "python", "name": "Python"},
+        {"icon": "java", "name": "Java"},
+        {"icon": "php", "name": "PHP"},
+        {"icon": "csharp", "name": "C#"}
+    ],
+    "frameworks": [
+        {"icon": "react", "name": "React"},
+        {"icon": "tailwind", "name": "Tailwind"}
+    ],
+    "tools": [
+        {"icon": "figma", "name": "Figma"},
+        {"icon": "github", "name": "Github"},
+        {"icon": "git", "name": "Git"},
+        {"icon": "intellij", "name": "IntelliJ"},
+        {"icon": "jupyter", "name": "Jupyter"},
+        {"icon": "mariadb", "name": "MariaDB"},
+        {"icon": "vscode", "name": "VSCode"},
+        {"icon": "vs", "name": "Visual Studio"}
+    ],
+    "ai": [
+        {"icon": "claude", "name": "Claude"},
+        {"icon": "openAi", "name": "Open AI"}
+    ]
+}

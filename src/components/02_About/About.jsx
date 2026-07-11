@@ -3,17 +3,16 @@ import ExperienceCard from "./ExperienceCard"
 import CertificationCard from "./CertificationCard"
 import ResponsiveHeadshot from "../01_Hero/ResponsiveHeadshot"
 
-import { Award, FileBadge, Users, Sparkles } from 'lucide-react';
-import { education, experience, certification } from "./AboutInfo";
+import aboutInfo from "./AboutInfo.json";
 import { useState } from "react";
 
 const About = () => {
-    const uniqueOrganisations = [...new Set(certification.map(item => item.organisation))];
+    const uniqueOrganisations = [...new Set(aboutInfo.certs.map(item => item.organisation))];
     const [organisation, setOrganisation] = useState("");
 
     const filteredOrganisations = organisation 
-        ? certification.filter(item => item.organisation === organisation)
-        : certification;
+        ? aboutInfo.certs.filter(item => item.organisation === organisation)
+        : aboutInfo.certs;
 
     const filterOrganisations = (org) => {
         setOrganisation(org);
@@ -50,14 +49,14 @@ const About = () => {
 
             <h3>Education</h3>
             <div className="education">
-                {education.map((item, index) => (
+                {aboutInfo.education.map((item, index) => (
                     <EducationCard key={index} {...item}/>
                 ))}
             </div>
 
             <h3>Experience</h3>
             <div className="experience">
-                {experience.map((item, index) => (
+                {aboutInfo.experience.map((item, index) => (
                     <ExperienceCard key={index} {...item}/>
                 ))}
             </div>
