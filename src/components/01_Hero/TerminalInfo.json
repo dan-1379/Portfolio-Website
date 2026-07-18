@@ -5,5 +5,12 @@
     {"key": "education", "value": "BSc Computing, MTU Kerry"},
     {"key": "status", "value": "IT Operations & Service Delivery @ Fexco"},
     {"key": "exploring", "value": "Building web applications with React JS"},
-    {"key": "fortune", "value": "Fortune favors the developer who reads the error message"}
+    {"key": "fortune", "value": [
+        "Fortune favors the developer who reads the error message",
+        "The bug you've been chasing for three days is just a missing semicolon.",
+        "May your deployment execute smoothly and your coffee remain perpetually hot.",
+        "Your code will run perfectly on the first try, creating intense suspicion.",
+        "The stack overflow thread you need will have an accepted answer from 2012."
+        ]
+    }
 ]

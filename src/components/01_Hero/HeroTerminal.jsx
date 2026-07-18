@@ -1,8 +1,20 @@
 import { X, Minus, Maximize2 } from 'lucide-react';
 import info from "./TerminalInfo.json";
 import TerminalLine from './TerminalLine';
+import { useEffect, useState } from 'react';
 
 const HeroTerminal = () => {
+    const [randomFortune, setRandomFortune] = useState(0);
+
+    useEffect(() => {
+        const chooseRandomFortune = () => {
+            const randomNumber = Math.floor(Math.random() * 5);
+            setRandomFortune(randomNumber);
+        }
+
+        chooseRandomFortune();
+    }, []);
+
     return (
         <>
             <div className="upper-terminal">
@@ -34,8 +46,12 @@ const HeroTerminal = () => {
                 <pre>
                     <span className="terminal-punctuation">&#123;</span> <br />
                     
-                    {info.map((line, index) => (
+                    {info.slice(0, 6).map((line, index) => (
                         <TerminalLine key={index} name={line.key} value={line.value} isLast={index === info.length - 1} />
+                    ))}
+
+                    {info.slice(6).map((line, index) => (
+                        <TerminalLine key={index} name={line.key} value={line.value[randomFortune]} isLast={true} />
                     ))}
 
                     <span className="terminal-punctuation">&#125;</span>

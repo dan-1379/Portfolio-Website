@@ -621,17 +621,35 @@ section h3 {
 /*
     SKILLS
 */
-.languages, .frameworks, .tools, .ai {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 2em;
-    margin-top: 1em;
+
+#skills .carousel {
+    height: 8em;
+    align-content: center;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.track {
+    display: flex;
+    gap: 0.5em;
+    width: max-content;
+    will-change: transform;
+    animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 .skillCard {
-    background-color: var(--card);
-    padding: 2em;
+    background-color: transparent;
+    overflow: hidden;
+    padding: 1em 2em;
     display: flex;
+    gap: 0.2em;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
@@ -640,21 +658,19 @@ section h3 {
     color: white;
     text-align: center;
     transition: 0.2s ease-in;
-    box-shadow: inset 0 0 10px var(--border);
+    border: 1px solid var(--border);
 }
 
 .skillCard img {
-    width: 3em;
-    height: 3em;
+    width: 2em;
+    height: 2em;
     margin-bottom: 0.5em;
 }
 
 .skillCard span {
-    color: var(--muted);
-}
-
-.skillCard:hover {
-    scale: 90%;
+    color: var(--text);
+    font-size: 0.5em;
+    text-transform: uppercase;
 }
 
 /*

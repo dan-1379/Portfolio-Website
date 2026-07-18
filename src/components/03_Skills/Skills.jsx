@@ -4,33 +4,41 @@ import skills from "./SkillsInfo.json";
 const Skills = () => {
     return (
         <section id="skills">
-            <h2>Skills</h2>
-            <h3>Languages</h3>
-            <div className="languages">
-                {skills.languages.map((item, index) => (
-                    <SkillCard key={index} {...item}/>
-                ))}
-            </div>
-          
-            <h3>Frameworks</h3>
-            <div className="frameworks">
-                {skills.frameworks.map((item, index) => (
-                    <SkillCard key={index} {...item}/>
-                ))}
-            </div>
+            <div className="carousel">
+                <div className="track">
+                    {skills.languages.map((item, index) => (
+                        <SkillCard key={index} {...item}/>
+                    ))}
 
-            <h3>Tools</h3>
-            <div className="tools">
-                {skills.tools.map((item, index) => (
-                    <SkillCard key={index} {...item}/>
-                ))}
-            </div>
+                    {skills.frameworks.map((item, index) => (
+                        <SkillCard key={index} {...item}/>
+                    ))}
 
-            <h3>Artificial Intelligence</h3>
-            <div className="ai">
-                {skills.ai.map((item, index) => (
-                    <SkillCard key={index} {...item}/>
-                ))}
+                    {skills.tools.map((item, index) => (
+                        <SkillCard key={index} {...item}/>
+                    ))}
+
+                    {skills.ai.map((item, index) => (
+                        <SkillCard key={index} {...item}/>
+                    ))}
+
+
+                    {skills.languages.map((item, index) => (
+                        <SkillCard key={index} {...item}/>
+                    ))}
+
+                    {skills.frameworks.map((item, index) => (
+                        <SkillCard key={index} {...item}/>
+                    ))}
+
+                    {skills.tools.map((item, index) => (
+                        <SkillCard key={index} {...item}/>
+                    ))}
+
+                    {skills.ai.map((item, index) => (
+                        <SkillCard key={index} {...item}/>
+                    ))}
+                </div>
             </div>
         </section>
     )

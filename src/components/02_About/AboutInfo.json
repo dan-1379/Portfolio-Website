@@ -9,6 +9,9 @@
         {"role": "Customer Service Representative", "company": "Fexco", "fromDate": "Jul 2022", "toDate": "Sep 2024"}
     ],
     "certs": [
+        {"certification": "Agile Project Management", "organisation": "LinkedIn", "issueDate": "Jul 2026", "credential": "https://www.linkedin.com/learning/certificates/3c279729948cb4bb47c5fcf2483c22a4ffa884d4eee3e095cfa76a1591c20720?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BFLMAMBzhQVqDBm6VsiN7HQ%3D%3D", "icon": "sparkles"},
+        {"certification": "Learning Confluence", "organisation": "LinkedIn", "issueDate": "Jul 2026", "credential": "https://www.linkedin.com/learning/certificates/7aa60c02881bbaa2eb6e399647be1990110b875b96e4afe038bff45812d05d7b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BFLMAMBzhQVqDBm6VsiN7HQ%3D%3D", "icon": "sparkles"},
+        {"certification": "Learning Jira", "organisation": "LinkedIn", "issueDate": "Jul 2026", "credential": "https://www.linkedin.com/learning/certificates/3f96f26f502bafcd9f26d0a24cdb465d96f1e929ecc13d6cb1ef4a6666823236", "icon": "sparkles"},
         {"certification": "EDGE Gold Award", "organisation": "Munster Technological University", "issueDate": "Apr 2026", "credential": "https://my.potential.ly/folio/badge/bC5aH5IhLUAPsNus", "icon": "award"},
         {"certification": "Peer Mentoring", "organisation": "Munster Technological University", "issueDate": "Apr 2026", "credential": "https://www.linkedin.com/in/daniel-courtney-7b9255331/details/certifications/", "icon": "users"},
         {"certification": "MTU Joint Mentorship Programme", "organisation": "Munster Technological University", "issueDate": "Apr 2026", "credential": "https://www.linkedin.com/in/daniel-courtney-7b9255331/details/certifications/", "icon": "fileBadge"},
