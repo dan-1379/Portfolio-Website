@@ -341,6 +341,16 @@ header p {
     transition: 0.2s ease-in;
 }
 
+.header-terminal-closed {
+    width: 10%;
+    height: 10vh;
+    overflow: hidden;
+}
+
+.header-terminal-exit {
+    display: none;
+}
+
 .header-terminal:hover {
     scale: 1.01;
 }
@@ -403,6 +413,10 @@ body.light-mode .header-terminal {
   background-color: #28C840;
 }
 
+.inactive-terminal-button {
+    background-color: lightgrey;
+}
+
 .terminal-content {
     padding: 2em;
 }
@@ -439,6 +453,17 @@ pre {
 
 .terminal-line {
     padding-left: 1em;
+}
+
+.terminalExpanded {
+    position: fixed;
+    inset: 3em;
+    background-color: var(--card);
+    z-index: 20;
+    align-self: center;
+    margin: 2em;
+    border-radius: 2em;
+    max-height: -webkit-fill-available;
 }
 
 /*
@@ -1122,7 +1147,7 @@ footer {
 }
 
 @media screen and (max-width: 1260px) and (min-width: 701px) {
-    .header-terminal {
+    .header-terminal, .header-terminal-closed, .header-terminal-exit {
         display: none;
     }
     
@@ -1208,7 +1233,7 @@ screen and (max-height: 500px) and (orientation: landscape) {
         display: block;
     }
 
-    .header-terminal {
+    .header-terminal, .header-terminal-closed, .header-terminal-exit {
         display: none;
     }
 

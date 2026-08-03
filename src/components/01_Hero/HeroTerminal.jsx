@@ -3,7 +3,7 @@ import info from "./TerminalInfo.json";
 import TerminalLine from './TerminalLine';
 import { useEffect, useState } from 'react';
 
-const HeroTerminal = () => {
+const HeroTerminal = ({ type = "default", onExit, onClose, onExpand }) => {
     const [randomFortune, setRandomFortune] = useState(0);
 
     useEffect(() => {
@@ -21,17 +21,23 @@ const HeroTerminal = () => {
                 <div className="upper-terminal-buttons">
                     <div className="upper-terminal-button">
                         <div className="exit-terminal-button" aria-hidden="true"></div>
-                        <X size={12} />
+                        <X size={12} onClick={onExit} />
                     </div>
 
                     <div className="upper-terminal-button">
-                        <div className="close-terminal-button" aria-hidden="true"></div>
-                        <Minus size={12} />
+                        {type != "expanded" ?
+                            <>
+                                <div className="close-terminal-button" aria-hidden="true"></div>
+                                <Minus size={12} onClick={onClose} />
+                            </>
+                            :
+                            <div className="inactive-terminal-button" aria-hidden="true"></div>
+                        }
                     </div>
                     
                     <div className="upper-terminal-button">
                         <div className="expand-terminal-button" aria-hidden="true"></div>
-                        <Maximize2 size={12} />
+                        <Maximize2 size={12} onClick={onExpand} />
                     </div>
                 </div>
             </div>

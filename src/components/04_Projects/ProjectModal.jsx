@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronRight, ChevronLeft, X } from "lucide-react";
 import { projectImages } from "./ProjectImages";
 
@@ -16,6 +16,14 @@ const ProjectModal = ({ project, onClose }) => {
 
     const nextImage = () => setCurrentImage((prev) => (prev + 1) % project.images.length);
     const prevImage = () => setCurrentImage((prev) => (prev - 1 + project.images.length) % project.images.length);
+
+    useEffect(() => {
+        document.body.style.overflow = 'hidden';
+
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, []);
 
     return (
         <>
