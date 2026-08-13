@@ -1,14 +1,18 @@
 import EducationCard from "./EducationCard"
 import ExperienceCard from "./ExperienceCard"
-import CertificationCard from "./CertificationCard"
+import CertificationGridCard from "./CertificationGridCard"
+import CertificationListCard from './CertificationListCard';
 import ResponsiveHeadshot from "../01_Hero/ResponsiveHeadshot"
 
 import aboutInfo from "./AboutInfo.json";
 import { useState } from "react";
 
+import { TextAlignJustify, LayoutGrid } from "lucide-react";
+
 const About = () => {
     const uniqueOrganisations = [...new Set(aboutInfo.certs.map(item => item.organisation))];
     const [organisation, setOrganisation] = useState("");
+    const [certificationLayout, setCertificationLayout] = useState("grid");
 
     const filteredOrganisations = organisation 
         ? aboutInfo.certs.filter(item => item.organisation === organisation)
@@ -16,6 +20,10 @@ const About = () => {
 
     const filterOrganisations = (org) => {
         setOrganisation(org);
+    }
+
+    const handleLayoutChange = (layoutOption) => {
+        setCertificationLayout(layoutOption);
     }
 
     return (
@@ -62,19 +70,51 @@ const About = () => {
             </div>
 
             <h3>Certifications</h3>
+            
+            <div className="filterOptions">
+                <div className="filterMenu">
+                    <select name="certificationFilter" id="certificationFilter" onChange={(e) => filterOrganisations(e.target.value)}>
+                        <option value="">Filter All</option>
 
-            <div className="filterButtons">
+                        {uniqueOrganisations.sort().map((org, index) => (
+                            <option value={org} key={index}>{org}</option>
+                        ))}
+                    </select>
+                </div>
+
+                <div className="filterLayout">
+                    <form action="">
+                        <div className="filterLayoutOption">
+                            <input type="radio" name="layoutOption" id="listLayout" checked={certificationLayout == "list"} onChange={() => handleLayoutChange("list")} />
+                            <label htmlFor="listLayout"><TextAlignJustify size={15}/> List</label>
+                        </div>
+
+                        <div className="filterLayoutOption">
+                            <input type="radio" name="layoutOption" id="gridLayout" checked={certificationLayout == "grid"} onChange={() => handleLayoutChange("grid")}/>
+                            <label htmlFor="gridLayout"><LayoutGrid size={15}/> Grid</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            {/* <div className="filterButtons">
                 <button onClick={() => filterOrganisations("")} className={organisation === "" ? "activeFilter" : "inactiveFilter"}>All</button>
 
                 {uniqueOrganisations.sort().map((org, index) => (
                     <button key={index} onClick={() => filterOrganisations(org)} className={organisation === org ? "activeFilter" : "inactiveFilter"}>{org}</button>
                 ))}
-            </div>
+            </div> */}
 
-            <div className="certifications">
-                {filteredOrganisations.slice().reverse().map((item, index) => (
-                    <CertificationCard key={index} {...item}/>
-                ))}
+            <div className={certificationLayout == "grid" ? "certifications" : "certificationsList"}>
+                {certificationLayout === "grid" ? (
+                    filteredOrganisations.slice().reverse().map((item, index) => (
+                        <CertificationGridCard key={index} {...item} />
+                    ))
+                ) : (
+                    filteredOrganisations.slice().reverse().map((item, index) => (
+                        <CertificationListCard key={index} {...item} />
+                    ))
+                )}
             </div>
         </section>
     )

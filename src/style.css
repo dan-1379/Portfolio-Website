@@ -588,6 +588,182 @@ section h3 {
     gap: 2em;
 }
 
+.certificationListCard {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 0.5em 2em;
+    margin-bottom: 1em;
+    border-radius: 3px;
+    border-left: 3px solid var(--accent);
+    transition: 0.5s ease-in-out;
+}
+
+.certificationListCardIcon {
+    background-color: white;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+.certificationListCardContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.cardContentInfo h4 {
+    margin: 1em 0 0 0;
+}
+
+.cardContentInfo p {
+    margin: 0.5em 0 0.5em 0;
+}
+
+.cardContentLink a {
+    text-decoration: none;
+    color: var(--text);
+    margin-top: 1em;
+    display: block;
+    width: fit-content;
+    border: 1px solid var(--border);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    transition: 0.5s ease-in-out;
+}
+
+.cardContentLink a:hover {
+    background-color: var(--accent);
+    color: var(--bg);
+}
+
+/*
+    FILTER MENU (SELECT)
+*/
+.filterOptions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 1em 0;
+}
+
+.filterLayout {
+    align-items: center;
+}
+
+.filterLayout form {
+    display: flex;
+    border: 1px solid var(--border);
+    border-radius: 0.5em;
+    background-color: var(--card);
+    overflow: hidden;
+    width: fit-content;
+}
+
+.filterLayoutOption {
+    position: relative;
+}
+
+.filterLayoutOption:not(:last-child) {
+    border-right: 1px solid var(--border);
+}
+
+.filterLayoutOption input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.filterLayoutOption label {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.8em 1.2em;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.filterLayoutOption label:hover {
+    color: var(--text);
+}
+
+.filterLayoutOption input:checked + label {
+    background-color: var(--accent);
+    color: var(--bg);
+}
+
+.filterLayoutOption input:checked + label:hover {
+    color: var(--bg);
+}
+
+.filterLayoutOption input:focus-visible + label {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+}
+
+.filterMenu {
+    position: relative;
+    width: fit-content;
+    margin: 2em 0em;
+}
+
+.filterMenu select {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.8em 2.4em 0.8em 1.2em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.filterMenu select:hover {
+    border-color: var(--accent);
+}
+
+.filterMenu select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.filterMenu select option {
+    color: var(--text);
+}
+
+.filterMenu::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 1.1em;
+    width: 0.65em;
+    height: 0.65em;
+    transform: translateY(-60%) rotate(45deg);
+    border-right: 1.5px solid var(--muted);
+    border-bottom: 1.5px solid var(--muted);
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+}
+
+.filterMenu:hover::after,
+.filterMenu select:focus ~ .filterMenu::after {
+    border-color: var(--accent);
+}
+
 .filterButtons {
     display: flex;
     flex-direction: row;
@@ -619,6 +795,11 @@ section h3 {
 #about .inactiveFilter, #projects .projectFilterButtons .inactiveFilter {
     background-color: transparent;
     color: var(--text);
+}
+
+.filterLayout form {
+    display: flex;
+    gap: 2em;
 }
 
 .educationCard a {
@@ -733,9 +914,31 @@ section h3 {
     will-change: filter;
 }
 
+.listProjectCard {
+    border: 1px solid var(--border);
+    margin-top: 2em;
+    border-radius: 0.5em;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .projectCard:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     opacity: 1;
+}
+
+.listProjectCardIcon {
+    background-color: white;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.listProjectCardInfo {
+    display: flex;
+    gap: 2em;
+    align-items: center;
 }
 
 .projectCardIcon {
@@ -769,14 +972,14 @@ section h3 {
     text-transform: uppercase;
 }
 
-.projectCard h3 {
+.projectCard h3, .listProjectCard h3 {
     color: var(--accent);
     font-size: 1em;
     align-content: center;
     grid-row: 2;
 }
 
-.projectIcon {
+.projectIcon, .listProjectIcon {
     width: 2em;
     height: 2em;
     grid-row: 1;
@@ -787,7 +990,7 @@ section h3 {
     height: 1em;
 }
 
-.projectCard p {
+.projectCard p, .listProjectCard p {
     color: var(--muted);
     font-size: 0.9em;
     grid-row: 3;
@@ -800,7 +1003,7 @@ section h3 {
     grid-row: 4;
 }
 
-.projectCard span, .contentText span {
+.projectCard span, .contentText span, .techStack span {
     border: 1px solid var(--border);
     color: var(--muted);
     padding: 0.5em 1em;
@@ -1265,12 +1468,76 @@ screen and (max-height: 500px) and (orientation: landscape) {
         flex-direction: column;
     }
 
+    .filterMenu {
+        width: 100%;
+    }
+
+    .filterMenu select {
+        width: 100%;
+    }
+
+    .filterOptions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filterLayout {
+        display: none;
+    }
+
+    .filterLayout form {
+        width: 100%;
+    }
+
+    .filterLayoutOption {
+        flex: 1;
+    }
+
+    .filterLayoutOption label {
+        justify-content: center;
+    }
+
+    .certificationListCard {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .certificationListCardIcon {
+        margin-top: 1em;
+    }
+
+    .certificationListCardContent {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cardContentLink {
+        margin-bottom: 1em;
+    }
+
     .projectCards {
         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     }
 
     .projectCards:has(.projectCard:hover) .projectCard:not(:hover) {
         filter: none;
+    }
+
+    .listProjectCard {
+        flex-direction: column;
+        text-align: center;
+        align-content: center;
+    }
+
+    .listProjectCardInfo {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .listProjectCardContent .techStack {
+        display: flex;
+        justify-content: center;
     }
 
     .content{
