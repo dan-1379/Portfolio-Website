@@ -133,7 +133,6 @@
         "overview":"Interrail website that documents a personal interrailing trip across Europe, featuring travel photography from various cities, alongside journey details and travel advice.",
         "dateFrom": "Nov 2024",
         "dateTo": "Dec 2024",
-        "progress": "complete",
-        "countries": ["London", "Amsterdam", "Berlin", "Prague", "Munich", "Paris", "Dublin"]
+        "progress": "complete"
     }
 ]

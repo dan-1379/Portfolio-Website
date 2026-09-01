@@ -1099,19 +1099,15 @@ section h3 {
     position: absolute;
     top: 1em;
     right: 1em;
-    padding: 0.8em 1em;
-    background-color: red;
-    color: var(--bg);
+    padding: 0.5em;
+    background-color: var(--bg);
+    color: var(--text);
     border: none;
-    border-radius: 50%;
+    border-radius: 0.5em;
     font-size: 1em;
     margin-bottom: 1em;
     z-index: 1;
     cursor: pointer;
-}
-
-.content > button:first-child:hover {
-    background-color: rgb(233, 2, 2);
 }
 
 .content button:active {
@@ -1239,7 +1235,8 @@ section h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 1;
+    width: fit-content;
+    text-wrap: wrap;
 }
 
 .contactLinks {
@@ -1251,32 +1248,60 @@ section h3 {
 
 .contactLink {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--border);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    text-decoration: none;
+}
+
+.contactLink:hover {
+    background-color: var(--surface);
+    color: var(--text);
+}
+
+.contactLinkInfo {
+    display: flex;
     gap: 1em;
     align-items: center;
 }
 
-.contactLink a {
-    text-decoration: none;
-    color: var(--muted);
+.contactLinkIcon {
+    background-color: var(--accent);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    color: var(--bg);
+    display: flex;
+    justify-content: center;
 }
 
-.contactLink a:hover {
-    border-bottom: 1px solid var(--accent);
-    color: var(--text);
-}
-
-.contactIcon {
-    color: var(--text);
+.contactLinkIcon svg {
     width: 1.5em;
     height: 1.5em;
 }
 
-.contactLink a:hover .contactIcon {
-    color: red;
+.contactLinkText {
+    padding-top: 1em;
+}
+
+.contactLinkText span {
+    color: var(--accent);
+    text-transform: uppercase;
+    display: block;
+}
+
+.contactLinkText p {
+    color: var(--text)
+}
+
+.contactLinkOutIcon svg {
+    color: var(--accent);
 }
 
 .contactImage {
-    width: 40vw;
+    width: 90vw;
 }
 
 .contactImage img {
@@ -1569,6 +1594,21 @@ screen and (max-height: 500px) and (orientation: landscape) {
 
     #contact {
         flex-direction: column;
+    }
+
+    .contactLink {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 1.5em;
+    }
+
+    .contactLinkInfo {
+        flex-direction: column;
+    }
+
+    .contactLinkOutIcon svg {
+        width: 1em;
+        height: 1em;
     }
 
     .contactImage {

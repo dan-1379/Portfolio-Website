@@ -1,5 +1,5 @@
 import propTypes from "prop-types";
-import { Mail, Handshake, Computer, FileUser } from 'lucide-react';
+import { Mail, Handshake, Computer, FileUser, ArrowUpRight } from 'lucide-react';
 
 const links = {
     mail: Mail,
@@ -22,18 +22,28 @@ const ContactLink = (props) => {
     const Icon = links[props.icon];
 
     return (
-        <div className="contactLink">
-            <Icon className='contactIcon' aria-hidden = "true"/>
+        <a 
+            href={props.href} 
+            target={props.external ? "_blank" : undefined}
+            rel={props.external ? "noopener noreferrer" : undefined}
+            download={props.download}
+            className="contactLink"
+        >
+            <div className="contactLinkInfo">
+                <div className="contactLinkIcon">
+                    <Icon className='contactIcon' aria-hidden = "true"/>
+                </div>
 
-            <a 
-                href={props.href} 
-                target={props.external ? "_blank" : undefined}
-                rel={props.external ? "noopener noreferrer" : undefined}
-                download={props.download}
-            >
-                {props.name}
-            </a>
-        </div>
+                <div className="contactLinkText">
+                    <span>{props.name}</span>
+                    <p>{props.username}</p>
+                </div>
+            </div>
+
+            <div className="contactLinkOutIcon">
+                <ArrowUpRight size={15} />
+            </div>
+        </a>
     )
 }
 

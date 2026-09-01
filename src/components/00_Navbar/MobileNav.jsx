@@ -48,11 +48,11 @@ const MobileNav = ({ isOpen, onClose, lightModeOn, onToggle }) => {
                     ))}
                 </ul>
 
-                <div className="navbar-footer-mobile">
+                {/* <div className="navbar-footer-mobile">
                     {ContactInfo.slice(1, 3).map((info, index) => (
                         <ContactLink key={index} {...info} />
                     ))}
-                </div>
+                </div> */}
             </div>
         </>
     )
